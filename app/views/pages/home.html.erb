@@ -1,14 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to creations_path(:type => video), class: 'btn btn-primary' do %>
-  <h3>Video</h3>
-<% end %>
-<%= link_to creations_path(:type => article), class: 'btn btn-primary' do %>
-  <h3>Video</h3>
-<% end %>
-<%= link_to creations_path(:type => site), class: 'btn btn-primary' do %>
-  <h3>Video</h3>
-<% end %>
-<%= link_to creations_path(:type => design), class: 'btn btn-primary' do %>
-  <h3>Video</h3>
-<% end %>
+<%= link_to "Graphic Design", creations_path, class: 'btn btn-primary' %>
+<%= link_to "Web Site", sites_path, class: 'btn btn-primary' %>
+<%= link_to "Video", videos_path, class: 'btn btn-primary' %>
+<%= link_to "Articles", articles_path, class: 'btn btn-primary' %>
