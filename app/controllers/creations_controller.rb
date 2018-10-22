@@ -1,37 +1,38 @@
 class CreationsController < ApplicationController
-before_action :find_by_id, only: [:show, :edit, :update, :destroy]
+  before_action :find_by_id, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
-def index
-  @creations = Creation.where(params[:type])
-end
+  def index
+    @creations = Creation.all
+  end
 
-def show
-end
+  def show
+  end
 
-def new
-end
+  def new
+  end
 
-def create
-end
+  def create
+  end
 
-def edit
+  def edit
 
-end
+  end
 
-def update
-end
+  def update
+  end
 
-def destroy
-end
+  def destroy
+  end
 
-private
+  private
 
-def find_by_id
-  @creation = Creation.find(params[:id])
-end
+  def find_by_id
+    @creation = Creation.find(params[:id])
+  end
 
-def creation_params
-  params.require(:creation).permit(:title, :url, :photo, :type, :description )
-end
+  def creation_params
+    params.require(:creation).permit(:title, :url, :photo, :type, :description )
+  end
 
 end
