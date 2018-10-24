@@ -47,9 +47,10 @@
             <li class="d-flex justify-content-around item">
               <div class="profil_avatar_photo">
                 <%= cl_image_tag(site.photo, class: 'avatar',
-                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+                width: 150, height: 150, crop: :thumb, gravity: :face) %>
               </div>
               <p class="d-flex align-items-center"><%= site.title %></p>
+              <%= link_to "photo", sitephotos_path(:id => site.id), class:"btn btn-primary size" %>
               <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
               <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
             </li>
@@ -61,15 +62,15 @@
       <h4> The creations : </h4>
       <div class="col anotherclassforstyle-left">
         <ul class="trip-creator-col">
-          <% @sites.each do |site| %>
+          <% @creations.each do |creation| %>
             <li class="d-flex justify-content-around item">
               <div class="profil_avatar_photo">
-                <%= cl_image_tag(site.photo, class: 'avatar',
-                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+                <%= cl_image_tag(creation.photo, class: 'avatar',
+                width: 150, height: 150, crop: :thumb, gravity: :face) %>
               </div>
-              <p class="d-flex align-items-center"><%= site.title %></p>
-              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
-              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+              <p class="d-flex align-items-center"><%= creation.title %></p>
+              <%= link_to "Update", edit_creation_path(creation.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", creation_path(creation.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
             </li>
           <% end %>
         </ul>
@@ -79,15 +80,15 @@
       <h4> The videos : </h4>
       <div class="col anotherclassforstyle-left">
         <ul class="trip-creator-col">
-          <% @sites.each do |site| %>
+          <% @videos.each do |video| %>
             <li class="d-flex justify-content-around item">
               <div class="profil_avatar_photo">
-                <%= cl_image_tag(site.photo, class: 'avatar',
-                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+                <%= cl_image_tag(video.photo, class: 'avatar',
+                width: 150, height: 150, crop: :thumb, gravity: :face) %>
               </div>
-              <p class="d-flex align-items-center"><%= site.title %></p>
-              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
-              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+              <p class="d-flex align-items-center"><%= video.title %></p>
+              <%= link_to "Update", edit_video_path(video.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", video_path(video.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
             </li>
           <% end %>
         </ul>
@@ -97,15 +98,15 @@
       <h4> The articles : </h4>
       <div class="col anotherclassforstyle-left">
         <ul class="trip-creator-col">
-          <% @sites.each do |site| %>
+          <% @articles.each do |article| %>
             <li class="d-flex justify-content-around item">
               <div class="profil_avatar_photo">
-                <%= cl_image_tag(site.photo, class: 'avatar',
-                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+                <%= cl_image_tag(article.photo, class: 'avatar',
+                width: 150, height: 150, crop: :thumb, gravity: :face) %>
               </div>
-              <p class="d-flex align-items-center"><%= site.title %></p>
-              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
-              <%= link_to "Delete", sites_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+              <p class="d-flex align-items-center"><%= article.title %></p>
+              <%= link_to "Update", edit_article_path(article.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", articles_path(article.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
             </li>
           <% end %>
         </ul>
