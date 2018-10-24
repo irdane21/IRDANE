@@ -105,7 +105,7 @@
               </div>
               <p class="d-flex align-items-center"><%= site.title %></p>
               <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
-              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+              <%= link_to "Delete", sites_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
             </li>
           <% end %>
         </ul>

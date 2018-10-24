@@ -10,9 +10,16 @@ class SitesController < ApplicationController
   end
 
   def new
+    @site = Site.new
   end
 
   def create
+    @site = Site.new(site_params)
+    if @site.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -20,9 +27,16 @@ class SitesController < ApplicationController
   end
 
   def update
+    if @site.update(site_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @site.destroy
+    redirect_to dashboard_path
   end
 
   private
