@@ -4,32 +4,114 @@
   <div class="d-flex justify-content-center">
     <h2> Welcome Adrien! </h2>
   </div>
-  <div class="row">
-    <div class="dashboard-card">
-      <h3> Add a new creation</h3>
+  <div class="dashboard-card ">
+    <h3> Add a new creation:</h3>
+    <div class="row">
       <div class="col">
         <div class="d-flex justify-content-center">
-          <%= link_to "Web Site", new_site_path, class:"btn btn-success" %>
+          <div class="button">
+            <%= link_to "Web Site", new_site_path, class:"btn btn-success" %>
+          </div>
         </div>
       </div>
       <div class="col">
         <div class="d-flex justify-content-center">
-          <%= link_to "Graphic Design", new_creation_path, class:"btn btn-success" %>
+          <div class="button">
+            <%= link_to "Graphic Design", new_creation_path, class:"btn btn-success" %>
+          </div>
         </div>
       </div>
       <div class="col">
         <div class="d-flex justify-content-center">
-          <%= link_to "Video", new_video_path, class:"btn btn-success" %>
+          <div class="button">
+            <%= link_to "Video", new_video_path, class:"btn btn-success" %>
+          </div>
         </div>
       </div>
       <div class="col">
         <div class="d-flex justify-content-center">
-          <%= link_to "Article", new_article_path, class:"btn btn-success" %>
+          <div class="button">
+            <%= link_to "Article", new_article_path, class:"btn btn-success" %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="dashboard-card">
+    <h3> Modify a creation: </h3>
+    <div class="row">
+      <h4> The web sites : </h4>
+      <div class="col anotherclassforstyle-left">
+        <ul class="trip-creator-col">
+          <% @sites.each do |site| %>
+            <li class="d-flex justify-content-around item">
+              <div class="profil_avatar_photo">
+                <%= cl_image_tag(site.photo, class: 'avatar',
+                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+              </div>
+              <p class="d-flex align-items-center"><%= site.title %></p>
+              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <h4> The creations : </h4>
+      <div class="col anotherclassforstyle-left">
+        <ul class="trip-creator-col">
+          <% @sites.each do |site| %>
+            <li class="d-flex justify-content-around item">
+              <div class="profil_avatar_photo">
+                <%= cl_image_tag(site.photo, class: 'avatar',
+                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+              </div>
+              <p class="d-flex align-items-center"><%= site.title %></p>
+              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <h4> The videos : </h4>
+      <div class="col anotherclassforstyle-left">
+        <ul class="trip-creator-col">
+          <% @sites.each do |site| %>
+            <li class="d-flex justify-content-around item">
+              <div class="profil_avatar_photo">
+                <%= cl_image_tag(site.photo, class: 'avatar',
+                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+              </div>
+              <p class="d-flex align-items-center"><%= site.title %></p>
+              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <h4> The articles : </h4>
+      <div class="col anotherclassforstyle-left">
+        <ul class="trip-creator-col">
+          <% @sites.each do |site| %>
+            <li class="d-flex justify-content-around item">
+              <div class="profil_avatar_photo">
+                <%= cl_image_tag(site.photo, class: 'avatar',
+                width: 50, height: 50, crop: :thumb, gravity: :face) %>
+              </div>
+              <p class="d-flex align-items-center"><%= site.title %></p>
+              <%= link_to "Update", edit_site_path(site.id), class:"btn btn-warning size" %>
+              <%= link_to "Delete", site_path(site.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
   <% else  %>
 
     <h2> Oups! there is nothing for you here...</h2>
