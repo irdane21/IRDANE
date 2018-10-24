@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :authenticate_user!
+  skip_before_action :authenticate_user!
   def dashboard
     if user_signed_in?
       @sites = Site.all
