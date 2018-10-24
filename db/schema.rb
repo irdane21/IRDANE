@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_23_214450) do
+ActiveRecord::Schema.define(version: 2018_10_24_195807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2018_10_23_214450) do
     t.string "photo"
     t.string "collection"
     t.text "description"
+  end
+
+  create_table "sitephotos", force: :cascade do |t|
+    t.string "photo"
+    t.bigint "site_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["site_id"], name: "index_sitephotos_on_site_id"
   end
 
   create_table "sites", force: :cascade do |t|
@@ -68,4 +76,5 @@ ActiveRecord::Schema.define(version: 2018_10_23_214450) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "sitephotos", "sites"
 end

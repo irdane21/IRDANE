@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h3>Add some photo to this project ? </h3>
+      <%= simple_form_for @sitephoto do |f| %>
+        <%= f.input :site_id, as: :hidden, input_html: {value: @site.id} %>
+        <%= f.input :photo %>
+        <%= f.error_notification message: 'Something went wrong' %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.submit class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>

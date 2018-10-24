@@ -1,0 +1,12 @@
+<div class="container">
+  <ul>
+    <% @sitephotos.each do |photo| %>
+      <li>
+        <%= cl_image_tag(photo.photo, class: 'avatar',
+                width: 150, height: 150, crop: :thumb, gravity: :face) %>
+        <%= link_to "Delete", sitephoto_path(photo.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger" %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a photo", new_sitephoto_path(:id => @site.id), class:"btn btn-success" %>
+</div>
