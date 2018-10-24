@@ -7,7 +7,7 @@ class AccountsController < ApplicationController
       @videos = Video.all
       @articles = Article.all
     else
-      redirect_to user_signed_in_path
+      redirect_to user_signed_in
     end
   end
 
