@@ -32,7 +32,7 @@ class CreationsController < ApplicationController
   end
 
   def creation_params
-    params.require(:creation).permit(:title, :url, :photo, :type, :description )
+    params.require(:creation).permit(:title, :url, :photo, :photo_cache, :type, :description )
   end
 
 end

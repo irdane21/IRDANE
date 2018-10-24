@@ -1,0 +1,51 @@
+.dashboard-card {
+  border: 1px solid $blue;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px 0px rgba(210, 210, 210, 1);
+  margin: 20px;
+  padding: 20px;
+  h3 {
+    text-align: center;
+  }
+  .button {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  .item {
+    margin: 5px;
+  }
+  .size {
+    padding: 10px 20px;
+  }
+  h4 {
+    margin: 0px 20px;
+  }
+}
+
+ul {
+  padding-inline-start: 0px
+}
+h2 {
+  margin: 30px;
+}
+
+.anotherclassforstyle-left {
+  height: 35vh;
+  background: transparent;
+  border-right: 1px solid #D3D3D3;
+  border-radius-top-left: 5px;
+  border-radius-bottom-left: 5px;
+  text-align: center;
+  margin: 20px;
+  .fa-users {
+    font-size: 40px;
+  }
+
+  h3 {
+    color: #e54d32;
+  }
+}
+.trip-creator-col {
+  height: 35vh;
+  overflow: scroll;
+}
