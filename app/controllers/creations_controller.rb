@@ -10,19 +10,32 @@ class CreationsController < ApplicationController
   end
 
   def new
+    @creation = Creation.new
   end
 
   def create
+    @creation = Creation.new(creation_params)
+    if @creation.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
   end
 
   def edit
-
   end
 
   def update
+    if @creation.update(creation_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @creation.destroy
+    redirect_to dashboard_path
   end
 
   private

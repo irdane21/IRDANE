@@ -1,0 +1,10 @@
+<%= simple_form_for @creation do |f| %>
+  <%= f.input :title, placeholder: @creation.title %>
+  <%= f.input :description, placeholder: @creation.description %>
+  <%= f.input :url, placeholder: @creation.url %>
+  <%= f.input :collection, placeholder: @creation.collection %>
+  <%= f.input :photo %>
+  <%= f.error_notification message: 'Something went wrong' %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>
