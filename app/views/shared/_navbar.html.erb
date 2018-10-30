@@ -1,32 +1,46 @@
-<div class="navbar">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <%= link_to root_path, class: "navbar-travel-brand" do %>
-          <%= image_tag "Net gradient stroke.png", class:"logo" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="row button-line">
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
-      </div>
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
-      </div>
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
-      </div>
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
-      </div>
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
-      </div>
-      <div class="col">
-        <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+<div class="wrapper">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <%= link_to root_path, class: "navbar-travel-brand" do %>
+            <%= image_tag "Net gradient stroke.png", class:"logo" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
+  <ul>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+    <li>
+      <%= link_to "Web Sites", sites_path, class:"btn-perso" %>
+    </li>
+  </ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+        <th scope="col"><%= link_to "Web Sites", sites_path, class:"btn-perso" %></th>
+      </tr>
+    </thead>
+  </table>
 </div>
 
