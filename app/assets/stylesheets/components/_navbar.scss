@@ -17,24 +17,27 @@
   }
 }
 .motherfucker {
+  margin: 2vh;
   height: 30vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-}
+ }
 .navbar-perso {
   width: 100%;
-  height: 40vh;
+  height: 42vh;
+  min-height: 300px;
   background-color: $gray;
-}
-ul {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  li {
-    display: inline;
-    flex: 1 1 auto;
-    padding: 0px 8px;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      display: inline;
+      flex: 1 1 auto;
+      padding: 0px 8px;
+    }
   }
 }
 .logo {
