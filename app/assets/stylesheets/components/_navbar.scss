@@ -1,40 +1,49 @@
-.wrapper {
-  background-color: white;
-  width: 100%;
-  ul {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 10px 0px;
-    li {
-      display: inline;
-      flex: 1 1 auto;
-    }
-  }
-  tr {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  th {
-    flex: 1 1 auto;
-    align-items: center;
-    padding: 10px 0px;
-    a {
-      width: 100%;
-    }
-  }
-}
-
 .btn-perso {
   padding: 10px 20px;
-  background-color: $red;
+  background-color: #000000;
   width: 100%;
-  color: #919191;
+  color: #ffffff;
+  transition: 0.3s ease;
+  border-radius: 0px;
   &:hover {
-    color: white;
+    color: purple;
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    color: #919191;
+    text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.navbar-perso {
+  width: 100%;
+  background-color: $gray;
+}
+ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  li {
+    display: inline;
+    flex: 1 1 auto;
+  }
+}
+.logo {
+  margin: 2rem;
+  height: 400px;
+  transition: 0.3s ease;
+  &:hover {
     transition: 0.3s ease;
     text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.container {
+  .row {
+    width: 100%;
   }
 }
 // Small devices (landscape phones, 576px and up)
@@ -45,38 +54,4 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .navbar {
-    width: 100%;
-    background-color: $gray;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-  }
-  .logo {
-    margin: 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 400px;
-    transition: 0.3s ease;
-    transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    &:hover {
-      transition: 0.3s ease;
-      text-decoration: none;
-      transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-      transform: scale(1.3);
-    }
-  }
-}
-.row {
-  width: 100%;
-}
-
-.button-line {
- padding: 10px;
 }
