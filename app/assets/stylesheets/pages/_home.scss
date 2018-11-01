@@ -1,1 +1,19 @@
-// Specific CSS for your home-page
+.wrapper-home {
+  background: #101010;
+}
+.background {
+  background-color: #BCBCBC;
+  width: 100%;
+  height: 100vh;
+    }
+.line1 {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid red;
+  -webkit-transform:
+      translateY(-20px)
+      translateX(5px)
+      rotate(27deg);
+  position: absolute;
+  /* top: -20px; */
+}

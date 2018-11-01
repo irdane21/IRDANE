@@ -1,9 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Graphic Design", creations_path, class: 'btn btn-primary' %>
-<%= link_to "Web Site", sites_path, class: 'btn btn-primary' %>
-<%= link_to "Video", videos_path, class: 'btn btn-primary' %>
-<%= link_to "Articles", articles_path, class: 'btn btn-primary' %>
-<%= cl_image_tag("ijgqke8quaceq94mqzze",
-      width: 400, height: 300, crop: :fill) %>
-<%= link_to "Papa link", dashboard_path, class: 'btn btn-danger' %>
+<div class="wrapper-home">
+  <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
+  <%= link_to "Graphic Design", creations_path, class: 'btn btn-primary' %>
+  <%= link_to "Web Site", sites_path, class: 'btn btn-primary' %>
+  <%= link_to "Video", videos_path, class: 'btn btn-primary' %>
+  <%= link_to "Articles", articles_path, class: 'btn btn-primary' %>
+  <%= cl_image_tag("ijgqke8quaceq94mqzze",
+        width: 400, height: 300, crop: :fill) %>
+  <%= link_to "Papa link", dashboard_path, class: 'btn btn-danger' %>
+  <div class="background">
+    <div class="line1"></div>
+    <div class="line2"></div>
+  </div>
+</div>
+

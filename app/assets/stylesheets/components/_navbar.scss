@@ -1,42 +1,58 @@
-.wrapper {
-  background-color: white;
+.btn-perso {
+  padding: 10px 20px;
+  background-color: $gray;
   width: 100%;
+  color: #ffffff;
+  transition: 0.3s ease;
+  border-radius: 0px;
+  &:hover {
+    color: purple;
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    color: #919191;
+    text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.motherfucker {
+  margin: 2vh;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.navbar-perso {
+  width: 100%;
+  height: 42vh;
+  min-height: 300px;
+  background-color: $gray;
   ul {
     width: 100%;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding: 10px 0px;
     li {
       display: inline;
       flex: 1 1 auto;
+      padding: 0px 8px;
     }
   }
-  tr {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  th {
-    flex: 1 1 auto;
-    align-items: center;
-    padding: 10px 0px;
-    a {
-      width: 100%;
-    }
+}
+.logo {
+  margin: 0.8rem;
+  width: 30vh;
+  transition: 0.3s ease;
+  &:hover {
+    transition: 0.3s ease;
+    text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 
-.btn-perso {
-  padding: 10px 20px;
-  background-color: $red;
-  width: 100%;
-  color: #919191;
-  &:hover {
-    color: white;
-    transition: 0.3s ease;
-    text-decoration: none;
-  }
-}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
 
@@ -45,38 +61,4 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .navbar {
-    width: 100%;
-    background-color: $gray;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-  }
-  .logo {
-    margin: 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 400px;
-    transition: 0.3s ease;
-    transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    &:hover {
-      transition: 0.3s ease;
-      text-decoration: none;
-      transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-      transform: scale(1.3);
-    }
-  }
-}
-.row {
-  width: 100%;
-}
-
-.button-line {
- padding: 10px;
 }
