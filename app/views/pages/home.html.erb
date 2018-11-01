@@ -1,4 +1,11 @@
 <div class="wrapper-home">
+  <div class="card-home">
+    <div class="left-part">
+      <div class="separateur">
+
+      </div>
+    </div>
+  </div>
   <h1>Pages#home</h1>
   <p>Find me in app/views/pages/home.html.erb</p>
   <%= link_to "Graphic Design", creations_path, class: 'btn btn-primary' %>
@@ -8,9 +15,22 @@
   <%= cl_image_tag("ijgqke8quaceq94mqzze",
         width: 400, height: 300, crop: :fill) %>
   <%= link_to "Papa link", dashboard_path, class: 'btn btn-danger' %>
-  <div class="background">
-    <div class="line1"></div>
-    <div class="line2"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="blog-post-image">
+          <img src="https://i.imgsafe.org/20ff17cabf.jpg" class="img-responsive center-block" />
+        </div>
+        <div class="post-detail_container">
+          <div class="sperator"></div>
+            <div class="post-content">
+              <h3 class="post-title">
+                Hello World
+              </h3>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
