@@ -1,5 +1,5 @@
 .banner-home-page {
-  background: linear-gradient(rgba(31, 41, 133, 1), rgba(43, 18, 54, 1));
+  background: linear-gradient(rgba(31, 41, 133, 0.3), rgba(43, 18, 54, 0.3));
   width: 100%;
 }
 
@@ -14,7 +14,7 @@
 
 .wrapper-home {
   background: transparent;
-  height: 550vh;
+  height: 270vh;
   position: relative;
 }
 
@@ -31,15 +31,10 @@
 
 .section-2 {
   position: absolute;
-  top: 230vh;
+  top: 180vh;
   left: 50%;
 }
 
-.section-3 {
-  position: absolute;
-  top: 340vh;
-  left: 50%;
-}
 .card-btn {
   text-align: center;
   margin: 3rem;
@@ -63,10 +58,10 @@
 
 .section-gauche {
   transform: translate(-50%, -50%);
-  height: 100vh;
+  height: 90vh;
   width: 90%;
-  background: $purple;
-  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
+  background: transparent;
+  // box-shadow: 0.5rem 0.5rem 0.5rem $orange;
   display: flex;
   .title {
     text-align: center;
@@ -74,7 +69,14 @@
   p {
     margin: 1rem;
   }
+  .rectangle-cache {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background: $purple;
+  }
   .equilibre {
+      height: 90%;
       z-index: 1111;
       width: 40%;
       background: $purple;
@@ -94,19 +96,31 @@
 
   .imagebox {
     width: 60%;
-    height: 100%;
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.5)), url('travel-share-2.png') ;
+    height: calc(100% - 2rem);
+    margin-top: 2rem;
+    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), url('travel-share-2.png') ;
     background-size: cover;
     background-position: center;
   }
 }
 
+.section-gauche:after {
+  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: calc(100% - 2rem); /* Half of the original height */
+  top: 2rem;
+  left:0;
+  z-index: -1;
+}
+
 .section-droit {
   transform: translate(-50%, -50%);
-  height: 100vh;
+  height: 90vh;
   width: 90%;
-  background: $purple;
-  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
+  background: transparent;
+  // box-shadow: 0.5rem 0.5rem 0.5rem $orange;
   display: flex;
   .title {
     text-align: center;
@@ -114,8 +128,16 @@
   p {
     margin: 1rem;
   }
+  .rectangle-cache {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    background: $purple;
+  }
   .equilibre {
       z-index: 1111;
+      height: 90%;
       width: 40%;
       background: #2b1236;
       position: absolute;
@@ -135,9 +157,52 @@
 
   .imagebox {
     width: 60%;
-    height: 100%;
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.5)), url('travel-share-2.png') ;
+    height: calc(100% - 2rem);
+    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), url('Test Logo Inkind.png') ;
     background-size: cover;
     background-position: center;
+    margin-top: 2rem;
+  }
+}
+
+.section-droit:after {
+  box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: calc(100% - 2rem); /* Half of the original height */
+  top: 2rem;
+  left:0;
+  z-index: -1;
+}
+
+.separateur-haut {
+  width: 100%;
+  // background: url("separateur haut.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.separateur-bas {
+  // height: 50vh;
+  width: 100%;
+  // background: url("separateur bas.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contact-work {
+  .content {
+    width: 100%;
+    height:30vh;
+    background: $purple;
+    display: flex;
+  }
+  .top-left {
+
+  }
+  .top-right {
+
   }
 }
