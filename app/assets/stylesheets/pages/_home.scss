@@ -1,15 +1,20 @@
 .banner-home-page {
-  height: 120vh;
+  background: linear-gradient(rgba(31, 41, 133, 1), rgba(43, 18, 54, 1));
   width: 100%;
-  background: url("banner-home.png");
+}
+
+.intro {
+  height: 300vh;
+  width: 100%;
+  background: url("Banner-home.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .wrapper-home {
-  background: linear-gradient(rgba(31, 41, 133, 1), rgba(43, 18, 54, 1));
-  height: 350vh;
+  background: transparent;
+  height: 550vh;
   position: relative;
 }
 
@@ -59,11 +64,10 @@
 .section-gauche {
   transform: translate(-50%, -50%);
   height: 100vh;
-  width: 100%;
-  background: #000;
-  // box-shadow: 0.5rem 0.5rem 0.5rem rgba(260,260,260,0.5);
+  width: 90%;
+  background: $purple;
+  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
   display: flex;
-  border-bottom: 0.2rem solid #000;
   .title {
     text-align: center;
   }
@@ -73,7 +77,7 @@
   .equilibre {
       z-index: 1111;
       width: 40%;
-      background: #000;
+      background: $purple;
       position: absolute;
       margin: 3%;
       color: #fff;
@@ -81,11 +85,11 @@
   .content {
     width: 50%;
     height: 100%;
-    background: #000;
+    background: $purple;
     box-sizing: box-shadow;
     transform: skew(-10deg);
     transform-origin: bottom;
-    box-shadow: 0.5rem 0rem 0.5rem rgba(0,0,0,0.5);
+    // box-shadow: 0.5rem 0rem 0.5rem #000;
   }
 
   .imagebox {
@@ -100,11 +104,10 @@
 .section-droit {
   transform: translate(-50%, -50%);
   height: 100vh;
-  width: 100%;
-  background: #000;
-  // box-shadow: 0.5rem 0.5rem 0.5rem rgba(260,260,260,0.5);
+  width: 90%;
+  background: $purple;
+  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
   display: flex;
-  border-bottom: 0.2rem solid #000;
   .title {
     text-align: center;
   }
@@ -114,7 +117,7 @@
   .equilibre {
       z-index: 1111;
       width: 40%;
-      background: #000;
+      background: #2b1236;
       position: absolute;
       right: 0;
       margin: 3%;
@@ -123,11 +126,11 @@
   .content {
     width: 50%;
     height: 100%;
-    background: #000;
+    background: #2b1236;
     box-sizing: box-shadow;
     transform: skew(10deg);
     transform-origin: bottom;
-    box-shadow: -0.5rem 0rem 0.5rem rgba(0,0,0,0.5);
+    // box-shadow: -0.5rem 0rem 0.5rem #000;
   }
 
   .imagebox {
