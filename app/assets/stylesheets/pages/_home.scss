@@ -1,35 +1,29 @@
 .wrapper-home {
   background: #101010;
-
+  height: 400vh;
 }
 
-.card-home {
-  width: 90%;
-  height: 100vh;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background: white;
-  margin: 5rem auto;
+* {
+  margin: 0;
+  padding: 0px;
+}
 
-  .left-part {
-    position: relative;
-    background: #003366;
-    width: 50%;
-    height: 100vh;
+.section-1 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
 
-  }
+.section-2 {
+  position: absolute;
+  top: 220%;
+  left: 50%;
+}
 
-  .separateur {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    background: #003366;
-    transform: skewX(18deg);
-    background: red;
-  }
-
+.section-3 {
+  position: absolute;
+  top: 340%;
+  left: 50%;
 }
 
 section {
@@ -40,70 +34,33 @@ section {
   height: 90vh;
   width: 150vh;
   background: #000;
-  box-shadow: 0 25px 30px rgba(0,0,0,0.5);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(260,260,260,0.1);
   display: flex;
-
+  .equilibre {
+      z-index: 1111;
+      width: 40%;
+      background: #000;
+      position: absolute;
+      margin: 3%;
+      color: #fff;
+    }
   .content {
-    width: calc(50% - 5rem);
+    width: 50%;
     height: 100%;
     background: #000;
+    box-sizing: box-shadow;
+    transform: skew(-10deg);
+    transform-origin: bottom;
+    box-shadow: 0.5rem 0rem 0.5rem rgba(0,0,0,0.5);
   }
 
   .imagebox {
-    width: calc(50% + 5rem);
+    width: 60%;
     height: 100%;
-    background: #f00;
-    box-sizing: border-box;
-    border-left: 10rem solid #000;
-    border-bottom: 90vh solid transparent;
-    background: url("IMG_7621.PNG");
+    background: url('travel-share-2.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    // background-position: center;
-    background-position: -100px -150px;
+    background-position: center;
+
   }
-}
 
-
-.post-detail_container
-{
-    position:relative;
-}
-
-#blog-items .item
-{
-    padding:0px 15px;
-}
-.sperator {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: skew(0, 7deg);
-  -moz-transform: skew(0, 7deg);
-  -ms-transform: skew(0, 7deg);
-  -o-transform: skew(0, 7deg);
-  transform: skew(0, 7deg);
-  background: red;
-  }
-.post-content
-{
-    background-color:red;
-    padding:15px 15px;
-    min-height: 300px;
-}
-
-.post-title
-{
-  font-size: 40px;
-  line-height: 24px;
-  margin-bottom: 2px;
-  color: #fff;
-  text-align: center;
-  margin-top: 88px;
 }
