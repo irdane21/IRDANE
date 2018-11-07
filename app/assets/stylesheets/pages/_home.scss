@@ -1,5 +1,5 @@
 .banner-home-page {
-  background: linear-gradient(rgba(31, 41, 133, 0.3), rgba(43, 18, 54, 0.3));
+  background: rgba(31, 41, 133, 0.3);
   width: 100%;
 }
 
@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 20;
 }
 
 .wrapper-home {
@@ -112,7 +113,7 @@
   height: calc(100% - 2rem); /* Half of the original height */
   top: 2rem;
   left:0;
-  z-index: -1;
+  // z-index: -1;
 }
 
 .section-droit {
@@ -173,7 +174,7 @@
   height: calc(100% - 2rem); /* Half of the original height */
   top: 2rem;
   left:0;
-  z-index: -1;
+  // z-index: -1;
 }
 
 .separateur-haut {
@@ -195,7 +196,6 @@
 .contact-work {
   width: 100%;
   height: 100vh;
-  margin-bottom: 15rem;
   padding-top: 15rem;
   padding-bottom: 15rem;
   .content {
@@ -203,6 +203,7 @@
     height: 30vh;
     background: $purple;
     position: relative;
+
   }
   .top-left {
     height: 100%;
@@ -213,8 +214,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    box-shadow: -0.5rem -0.5rem 0.5rem $orange;
+    z-index: 119;
+    box-shadow: 0rem -0.5rem 0.5rem $orange;
   }
   .top-right {
     height: 100%;
@@ -225,7 +226,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -2;
+    z-index: 118;
     box-shadow: -0.5rem -0.5rem 0.5rem $orange;
   }
   .bottom-left {
@@ -237,8 +238,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
-    box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    z-index: 119;
+    box-shadow: 0rem 0.5rem 0.5rem $orange;
   }
   .bottom-right {
     height: 100%;
@@ -249,7 +250,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -2;
+    z-index: 118;
     box-shadow: -0.5rem 0.5rem 0.5rem $orange;
   }
   .carre {
@@ -258,8 +259,18 @@
     left: 30%;
     background: $purple;
     width: 40%;
-    height: 70vh;
-    z-index: -3;
+    height: 65vh;
+    // z-index: -3;
+  }
+
+  .masque {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $purple;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
   }
   .content-message {
     position: absolute;
@@ -267,7 +278,7 @@
     left: 0;
     width: 100%;
     text-align: center;
-
+    z-index: 121;
     .choice {
       display: flex;
       width: 100%;
@@ -282,22 +293,139 @@
   }
 }
 
+.last-wrapper {
+  background: rgba(31, 41, 133, 0.3);
+  width: 100%;
+  height:300vh;
+  padding-top: 30vh;
+}
+
 .hobbies {
-  height: 100vh;
+  // margin-top: 30vh;
+  padding-bottom: 4rem;
   width: 100%;
   background: white;
-  box-shadow: 0rem -0.5rem 0.5rem $orange;
+  position: relative;
 
-  #hobbiestitle {
-    color: $blue !important;
-    text-align: center;
-    letter-spacing: 1rem;
-    height: 10vh;
+  .hobbies-left {
+    height: 100%;
+    width: 50%;
+    background: #FFF;
+    transform: skew(0deg, 20deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0rem -0.5rem 0rem $orange;
+  }
+
+  .hobbies-right {
+    height: 100%;
+    width: 50%;
+    background: white;
+    transform: skew(0deg, -20deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0rem -0.5rem 0rem $orange;  }
+
+  .hobbiestitle {
+    h2 {
+      color: $blue !important;
+      text-align: center;
+      letter-spacing: 1rem;
+      padding: 3rem;
+      z-index: +20000;
+    }
   }
 
   .card-perso{
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     display: flex;
+  }
+}
+
+.gauche {
+  margin: 1rem;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('video-home.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  .titre-perso {
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7)
+  }
+  .fa-search {
+    color: $white;
+    font-size: 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+}
+.gauche:hover {
+  margin: 1rem;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('video-home.png');
+  background-size: cover;
+  background-position: center;
+  .fa-search {
+    color: $white;
+    font-size: 5rem;
+    opacity: 1;
+    transition: 0.3s ease;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.droite {
+  margin: 1rem;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('article-home.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  .titre-perso {
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7)
+  }
+  .fa-search {
+    color: $white;
+    font-size: 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+}
+.droite:hover {
+  margin: 1rem;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('article-home.png');
+  background-size: cover;
+  background-position: center;
+  .fa-search {
+    color: $white;
+    font-size: 5rem;
+    opacity: 1;
+    transition: 0.3s ease;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }

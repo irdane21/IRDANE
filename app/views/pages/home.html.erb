@@ -54,6 +54,7 @@
       <div class="bottom-left"></div>
       <div class="bottom-right"></div>
       <div class="carre"></div>
+      <div class="masque"></div>
       <div class="content-message">
         <h2>Are you interest in my work?</h2>
         <div class="choice justify-content-center">
@@ -70,11 +71,32 @@
       </div>
     </div>
   </div>
+</div>
+<div class="last-wrapper">
+
   <div class="hobbies">
-    <h2 id="hobbiestitle">Hobbies</h2>
+    <div class="hobbies-left"></div>
+    <div class="hobbies-right"></div>
+    <div class="hobbiestitle">
+      <h2>Hobbies</h2>
+    </div>
     <div class="card-perso">
-    <div class="gauche"></div>
-    <div class="droite"></div>
+      <div class="gauche d-flex justify-content-center align-items-center">
+        <div class="titre-perso">
+          <h3>Videos</h3>
+        </div>
+        <%= link_to videos_path do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
+      <div class="droite d-flex justify-content-center align-items-center">
+        <div class="titre-perso">
+          <h3>Articles</h3>
+        </div>
+        <%= link_to articles_path do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
