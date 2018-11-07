@@ -1,20 +1,49 @@
 .banner-home-page {
   background: rgba(31, 41, 133, 0.3);
   width: 100%;
+  height: 240vh;
+  .rectangle-div {
+    width: 100%;
+    height: 120vh;
+    background: radial-gradient(#1f2985, #2b1236);
+    position: relative;
+    .b-l {
+      height: 50vh;
+      width: 50%;
+      background: $purple;
+      transform: skew(-45deg, 45deg);
+      transform-origin: bottom left;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    }
+    .b-r {
+      height: 50vh;
+      width: 50%;
+      background: $purple;
+      transform: skew(45deg, -45deg);
+      transform-origin: bottom right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    }
+  }
 }
 
-.intro {
-  height: 300vh;
+.gradient-div {
   width: 100%;
-  background: url("Banner-home.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 20;
+  height: 120vh;
+  background: radial-gradient(closest-side, #1f2985, #2b1236);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .wrapper-home {
-  background: transparent;
+  background: rgba(31, 41, 133, 0.3);
+  width: 100%;
   height: 270vh;
   position: relative;
 }
@@ -194,6 +223,7 @@
   background-position: center;
 }
 .contact-work {
+  background: rgba(31, 41, 133, 0.3);
   width: 100%;
   height: 100vh;
   padding-top: 15rem;
