@@ -1,17 +1,11 @@
 import "bootstrap";
 
-// element.addEventListener(eventType, (event) => {
-//   // Do something (callback)
-// });
-// const deletebutton = document.getElementById("deletebutton");
+var myAnimation = anime({
+  targets: ['.blue', '.green'],
+  translateX: '13rem',
+  rotate: 180,
+  borderRadius: '8px',
+  duration: 2000,
+  loop: false
 
-// deletebutton.addEventListener("click", (event) => {
-//   fetch("")
-//   .then(response => response.json())
-//   .then((data) => {
-//     data.results.forEach((person) => {
-//       const item = `<li>${person.name}</li>`;
-//       people.insertAdjacentHTML("beforeend", item);
-//     });
-//   });
-// })
+});

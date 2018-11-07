@@ -1,3 +1,5 @@
+
+
 .banner-home-page {
   background: rgba(31, 41, 133, 0.3);
   width: 100%;
@@ -39,6 +41,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  .green {
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem;
+  }
+  .bleu {
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem;
+  }
 }
 
 .wrapper-home {

@@ -42,6 +42,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    anime_js_rails (1.1.0)
     arel (9.0.0)
     autoprefixer-rails (9.2.1)
       execjs
@@ -227,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anime_js_rails
   autoprefixer-rails
   bootsnap
   bootstrap (~> 4.1.3)
