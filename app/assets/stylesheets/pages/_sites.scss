@@ -1,0 +1,61 @@
+.website-wrapper {
+  width: 100%;
+  height: 200vh;
+  background: $white;
+}
+.site-card {
+  margin-top: 15vh;
+  width: 90%;
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+  border-radius: 0.5rem;
+}
+.description {
+  text-align: justify;
+  height: 50%;
+  width: 100%;
+  h2 {
+    text-align: center;
+  }
+  p {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+.carousel-card {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 40%;
+  img {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  img:hover {
+
+  }
+}
+.button-card {
+  align-item: center;
+}
+.btn-card {
+  margin-top: 1%;
+  padding: 0.2rem 20%;
+  background-color: transparent;
+  color: #ffffff;
+  transition: 0.3s ease;
+  border: 0.2rem solid #FFF;
+  border-radius: 4px;
+  &:hover {
+    transition: 0.3s ease;
+    background-color: #ffffff;
+    color: $blue;
+    text-decoration: none;
+  }
+}
