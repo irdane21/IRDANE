@@ -31,9 +31,29 @@
       right: 0;
       box-shadow: -0.5rem 0.5rem 0.5rem $orange;
     }
+    .banner-text {
+      position: absolute;
+      top: 120vh;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
-
+.banner-text {
+      position: absolute;
+      top: 120vh;
+      width: 100%;
+      text-align: center;
+}
+.banner-logo {
+  margin-top: 10vh;
+  background: url('banner-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40vh;
+  height: 40vh;
+}
 .gradient-div {
   width: 100%;
   height: 120vh;
@@ -41,16 +61,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  .green {
-    width: 2rem;
-    height: 2rem;
-    margin: .5rem;
-  }
-  .bleu {
-    width: 2rem;
-    height: 2rem;
-    margin: .5rem;
-  }
 }
 
 .wrapper-home {
@@ -338,7 +348,7 @@
 .last-wrapper {
   background: rgba(31, 41, 133, 0.3);
   width: 100%;
-  height:300vh;
+  height:200vh;
   padding-top: 30vh;
 }
 
@@ -370,7 +380,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    box-shadow: 0rem -0.5rem 0rem $orange;  }
+    box-shadow: 0rem -0.5rem 0rem $orange;
 
   }
 
@@ -378,18 +388,18 @@
     width: 100%;
     height: 85vh;
     display: flex;
-    .hobbiestitle {
+  }
+}
+.hobbiestitle {
       width: 100%;
+      position: inherit;
       h2 {
         color: $blue !important;
         text-align: center;
         letter-spacing: 1rem;
         padding: 3rem;
-        z-index: +20000;
       }
-  }
-}
-
+    }
 .gauche {
   margin: 1rem;
   width: 50%;

@@ -1,1 +1,17 @@
-je suis l'index sites
+<%= render 'shared/navbar' %>
+<div class="website-wrapper">
+  <div class="site-card">
+    <div class="description">
+      <h2>TiTle</h2>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat"</p>
+    </div>
+    <div class="carousel-card">
+      <%= image_tag "travel-share-2.png" %>
+      <%= image_tag "travel-share-3.png" %>
+      <%= image_tag "travel-share-1.png" %>
+    </div>
+    <div class="button-card d-flex justify-content-center">
+      <%= link_to "Go visite it!", "", class: "btn btn-card" %>
+    </div>
+  </div>
+</div>

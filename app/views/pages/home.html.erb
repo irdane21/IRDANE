@@ -2,10 +2,14 @@
   <div class="rectangle-div">
     <div class="b-l"></div>
     <div class="b-r"></div>
-    <div class="gradient-div">
-      <div class="blue"></div>
-      <div class="green"></div>
-      <div class="logo"></div>
+    <div class="gradient-div d-flex justify-content-center">
+      <div class="banner-logo"></div>
+      <%= render 'shared/irdane' %>
+    </div>
+    <div class="banner-text">
+      <h1>
+        Welcome to my portfolio
+      </h1>
     </div>
   </div>
 </div>
@@ -67,12 +71,10 @@
       <h2>Are you interested in my work?</h2>
       <div class="choice justify-content-center">
         <div class="left">
-          <p> Let's check my freelance page</p>
-          <%= link_to "Check it", sites_path, class: "btn btn-home-card" %>
+          <%= link_to "Fiveer Page", sites_path, class: "btn btn-home-card" %>
         </div>
         <div class="right">
-          <p> Or contact my by e-mail</p>
-          <%= link_to "Email", sites_path, class: "btn btn-home-card" %>
+          <%= link_to "Autre Page", sites_path, class: "btn btn-home-card" %>
         </div>
       </div>
 
