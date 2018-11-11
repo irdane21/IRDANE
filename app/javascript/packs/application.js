@@ -2,7 +2,7 @@ import "bootstrap";
 
 var myAnimation = anime({
   targets: ['.I'],
-  translateX: '30vh',
+  translateX: ['-300vh', '0vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -11,7 +11,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.R1', '.R2'],
-  translateX: '39vh',
+  translateX: ['-300vh', '9vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -21,7 +21,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.R3'],
-  translateX: '55vh',
+  translateX: ['-300vh', '25vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -31,7 +31,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.R4'],
-  translateX: '42vh',
+  translateX: ['-300vh', '12vh'],
   rotate: 230,
   duration: 3000,
   loop: false,
@@ -41,7 +41,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.D1', '.D2'],
-  translateX: '64vh',
+  translateX: ['-300vh', '34vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -51,7 +51,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.D3'],
-  translateX: '75vh',
+  translateX: ['-300vh', '45vh'],
   rotate: 230,
   duration: 3000,
   loop: false,
@@ -61,7 +61,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.D4'],
-  translateX: '82.5vh',
+  translateX: ['-300vh', '52.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -71,7 +71,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.D5'],
-  translateX: '77.5vh',
+  translateX: ['-300vh', '47.5vh'],
   rotate: 315,
   duration: 3000,
   loop: false,
@@ -81,7 +81,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.A1', '.A2'],
-  translateX: '91.5vh',
+  translateX: ['-300vh', '61.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -91,7 +91,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.A3'],
-  translateX: '109.5vh',
+  translateX: ['-300vh', '79.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -101,7 +101,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.A4'],
-  translateX: '101.5vh',
+  translateX: ['-300vh', '71.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -111,7 +111,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.N1'],
-  translateX: '118.5vh',
+  translateX: ['-300vh', '88.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -121,7 +121,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.N2'],
-  translateX: '128.25vh',
+  translateX: ['-300vh', '98.25vh'],
   rotate: 323,
   duration: 3000,
   loop: false,
@@ -131,7 +131,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.N3'],
-  translateX: '138.5vh',
+  translateX: ['-300vh', '108.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -141,7 +141,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.E1', '.E2', '.E3'],
-  translateX: '147.5vh',
+  translateX: ['-300vh', '117.5vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
@@ -151,7 +151,7 @@ var myAnimation = anime({
 });
 var myAnimation = anime({
   targets: ['.E4'],
-  translateX: '155vh',
+  translateX: ['-300vh', '125vh'],
   rotate: 360,
   duration: 3000,
   loop: false,
