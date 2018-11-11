@@ -58,28 +58,10 @@
   width:80%;
   text-align: center;
 }
-.carousel-card {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  height: 40%;
-  img {
-    width: 30%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  img:hover {
 
-  }
-}
-.button-card {
-  align-item: center;
-}
 .btn-card {
-  margin-top: 1%;
-  padding: 0.2rem 20%;
+  margin-top: 4%;
+  padding: 1rem 5%;
   background-color: transparent;
   color: #ffffff;
   transition: 0.3s ease;
