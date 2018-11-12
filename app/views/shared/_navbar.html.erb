@@ -1,16 +1,22 @@
 <div class="navbar-perso">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col col-md-2">
-        <div class="motherfucker">
-          <%= link_to root_path do %>
-            <%= image_tag "Netgradientstroke.png", class:"logo" %>
-          <% end %>
-        </div>
-      </div>
+  <div class="navbar-left">
+    <div class="button-line d-flex justify-content-around align-items-center">
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
     </div>
   </div>
-  <ul>
+  <div class="navbar-rigth">
+<!--     <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+    <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+    <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %> -->
+  </div>
+  <div class="motherfucker">
+    <%= image_tag "Netgradientstroke.png", class:"logo" %>
+  </div>
+
+
+<!--   <ul>
     <li>
       <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
     </li>
@@ -29,7 +35,7 @@
     <li>
       <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
     </li>
-  </ul>
+  </ul> -->
 </div>
 
 
