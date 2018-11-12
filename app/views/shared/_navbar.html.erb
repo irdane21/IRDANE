@@ -1,18 +1,20 @@
 <div class="navbar-perso">
   <div class="navbar-left">
-    <div class="button-line d-flex justify-content-around align-items-center">
+    <div id="button-line-left" class="d-flex justify-content-around align-items-center mouvement-left">
       <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
       <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
       <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
     </div>
   </div>
   <div class="navbar-rigth">
-<!--     <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
-    <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
-    <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %> -->
+    <div id="button-line-right" class="d-flex justify-content-around align-items-center">
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+      <%= link_to "Web Sites", sites_path, class:"btn btn-perso" %>
+    </div>
   </div>
   <div class="motherfucker">
-    <%= image_tag "Netgradientstroke.png", class:"logo" %>
+    <%= image_tag "Netgradientstroke.png", class: "logo", id: "logo" %>
   </div>
 
 
