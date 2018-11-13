@@ -8,7 +8,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
+  background: $purple;
  }
 .navbar-perso {
   width: 100%;
@@ -17,7 +17,7 @@
   background-color: $purple;
 }
 
-.nav-left {
+.nav-bando{
   position:absolute;
   top: 50%;
   left: 50%;
@@ -25,27 +25,18 @@
   margin-top: -5vh;
   height: 10vh;
   width: 10vh;
+  z-index: 0;
   background: white;
-  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-  transition: width 2s ease-in-out;
-  transition-duration: 2s;
+  transition-duration: 2.5s;
 }
-// .nav-right {
-//   position:absolute;
-//   top: 50%;
-//   left: 50%;
-//   margin-left: -5vh;
-//   margin-top: -5vh;
-//   height: 10vh;
-//   width: 10vh;
-//   background: white;
-//   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-//   transition: width 2s;
-// }
+
 .logo {
   width: 30vh;
-  padding: 2vh;
+  padding: 1vh;
+  margin-bottom: 1vh;
   transition: 0.3s ease;
+  background: $purple;
+  z-index:10;
   &:hover {
     transition: 0.3s ease;
     text-decoration: none;
@@ -56,23 +47,52 @@
   }
 }
 
-// .nav-left {
-//   width: 10vh;
-//   -webkit-transition: left width 2s; /* For Safari 3.1 to 6.0 */
-//     transition: left width 2s;
-// }
-// .nav-right {
-//   width: 10vh;
-//   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-//     transition: width 2s;
-// }
+.motherfucker:hover >.nav-bando{
+  -ms-transform: scaleX(30);
+  -webkit-transform: scaleX(30);
+  transform: scaleX(30);
+}
 
-.motherfucker:hover >.nav-left{
-  width: calc(300% + 5vh);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+.button-line-left {
+  position: absolute;
+  top: 50%;
+  left:0;
+  margin-top: -5vh;
+  height: 10vh;
+  width: 50%;
+  background: transparent;
 }
-.motherfucker:hover >.nav-right {
-  width: calc(300% + 5vh)
+.button-line-right {
+  position: absolute;
+  top: 50%;
+  right:0;
+  margin-top: -5vh;
+  height: 10vh;
+  width: 50%;
+  background: transparent;
 }
+
+#middle {
+  width:16%;
+  height: 100%;
+}
+.btn-navbar {
+  // background:white;
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: $purple;
+  letter-spacing: .2rem;
+  transition: 0.3s ease;
+  z-index: 120000;
+  &:hover {
+    color: $orange;
+    transition: 0.3s ease;
+    text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+
