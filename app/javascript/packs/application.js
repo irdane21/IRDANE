@@ -160,30 +160,15 @@ var myAnimation = anime({
   backgroundColor: '#C4C4C4',
 });
 
-const navbar = document.getElementById("logo");
-navbar.addEventListener("click", (event) => {
-  console.log(event);
-  const adril = document.getElementById("button-line-left");
-  adril.classList.toggle("mouvement-left")
-  const adrir = document.getElementById("button-line-right");
-  adrir.classList.toggle("mouvement-right")
-});
-var navbarleftAnimation = anime({
-  targets: ['.mouvement-left'],
-  left: ['100%', '0%'],
-  duration: 2000,
-  loop: false,
-  opacity: 1,
-  backgroundColor: '#FFF',
-  easing: 'easeInOutQuad',
-});
-var navbarleftAnimation = anime({
-  targets: ['.mouvement-right'],
-  left: ['0%', '100%'],
-  duration: 2000,
-  opacity: 1,
-  loop: false,
-  backgroundColor: '#FFF',
-  easing: 'easeInOutQuad',
-});
-
+// $( ".logo" ).hover(
+//   function() {
+//     $(".nav-left").css( "width", "300%" );
+//   }, function() {
+//     $(".nav-right").css( "width", "300%");
+//   },
+//   function() {
+//     $(".nav-left").css( "width", "initial" );
+//   }, function() {
+//     $(".nav-right").css( "width", "initial");
+//   }
+// );

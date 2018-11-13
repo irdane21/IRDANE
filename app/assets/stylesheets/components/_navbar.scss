@@ -1,21 +1,3 @@
-.btn-perso {
-  padding: 10px 20px;
-  background-color: $gray;
-  color: #ffffff;
-  transition: 0.3s ease;
-  border-radius: 0px;
-
-  &:hover {
-    transition: 0.3s ease;
-    background-color: #ffffff;
-    color: #919191;
-    text-decoration: none;
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
-
 .motherfucker {
   margin-left: -15vh;
   margin-top: -15vh;
@@ -26,47 +8,40 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  // background-color: $purple;
- }
 
-#button-line-left {
-  width: 100%;
-  height: 10vh;
-  position: absolute;
-  top: 50%;
-  margin-top: -5vh;
-  padding-right: 15vh;
-}
-#button-line-right {
-  width: 100%;
-  height: 10vh;
-  position: absolute;
-  top: 50%;
-  margin-top: -5vh;
-  padding-left: 15vh;
-}
+ }
 .navbar-perso {
   width: 100%;
   height: 35vh;
   position: relative;
   background-color: $purple;
-  display: flex;
-}
-.navbar-left {
-  width: 50%;
-  height: 100%;
-  background: yellow;
-  display: inline-block;
-  position: relative;
-}
-.navbar-rigth {
-  width: 50%;
-  height: 100%;
-  background: green;
-  position: relative;
 }
 
-
+.nav-left {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -5vh;
+  margin-top: -5vh;
+  height: 10vh;
+  width: 10vh;
+  background: white;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s ease-in-out;
+  transition-duration: 2s;
+}
+// .nav-right {
+//   position:absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin-left: -5vh;
+//   margin-top: -5vh;
+//   height: 10vh;
+//   width: 10vh;
+//   background: white;
+//   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+//   transition: width 2s;
+// }
 .logo {
   width: 30vh;
   padding: 2vh;
@@ -77,15 +52,27 @@
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+// .nav-left {
+//   width: 10vh;
+//   -webkit-transition: left width 2s; /* For Safari 3.1 to 6.0 */
+//     transition: left width 2s;
+// }
+// .nav-right {
+//   width: 10vh;
+//   -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+//     transition: width 2s;
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+.motherfucker:hover >.nav-left{
+  width: calc(300% + 5vh);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.motherfucker:hover >.nav-right {
+  width: calc(300% + 5vh)
 }
