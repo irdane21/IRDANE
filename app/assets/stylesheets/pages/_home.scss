@@ -47,7 +47,7 @@
 }
 .banner-logo {
   margin-top: 10vh;
-  background: url('images/banner-logo.png');
+  background: image-url('banner-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -150,7 +150,7 @@
     width: 60%;
     height: calc(100% - 2rem);
     margin-top: 2rem;
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), url('travel-share-2.png') ;
+    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), image-url('travel-share-2.png') ;
     background-size: cover;
     background-position: center;
   }
@@ -210,7 +210,7 @@
   .imagebox {
     width: 60%;
     height: calc(100% - 2rem);
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), url('Test Logo Inkind.png') ;
+    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), image-url('Test Logo Inkind.png') ;
     background-size: cover;
     background-position: center;
     margin-top: 2rem;
@@ -403,7 +403,7 @@
   margin: 1rem;
   width: 50%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('video-home.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url('video-home.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -427,7 +427,7 @@
   margin: 1rem;
   width: 50%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('video-home.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-url('video-home.png');
   background-size: cover;
   background-position: center;
   .fa-search {
@@ -444,7 +444,7 @@
   margin: 1rem;
   width: 50%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('article-home.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),image-url('article-home.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -468,7 +468,7 @@
   margin: 1rem;
   width: 50%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('article-home.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-url('article-home.png');
   background-size: cover;
   background-position: center;
   .fa-search {
