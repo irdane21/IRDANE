@@ -160,15 +160,8 @@ var myAnimation = anime({
   backgroundColor: '#C4C4C4',
 });
 
-// $( ".logo" ).hover(
-//   function() {
-//     $(".nav-left").css( "width", "300%" );
-//   }, function() {
-//     $(".nav-right").css( "width", "300%");
-//   },
-//   function() {
-//     $(".nav-left").css( "width", "initial" );
-//   }, function() {
-//     $(".nav-right").css( "width", "initial");
-//   }
-// );
+const mymotion = document.getElementById("tada")
+mymotion.addEventListener("click", (event) => {
+  const left = document.getElementById("cachette-left").classList.toggle("motion")
+  const right = document.getElementById("cachette-right").classList.toggle("motion")
+})

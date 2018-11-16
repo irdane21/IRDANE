@@ -17,22 +17,27 @@
   background-color: $purple;
 }
 
-.nav-bando{
+.nav-bando {
   position:absolute;
   top: 50%;
-  left: 50%;
-  margin-left: -5vh;
   margin-top: -5vh;
   height: 10vh;
-  width: 10vh;
+  width: 100%;
   z-index: 0;
   background: white;
   transition-duration: 2.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#middle {
+  width: 30vh;
+  height: 100%
 }
 
 .logo {
   width: 30vh;
-  padding: 1vh;
   margin-bottom: 1vh;
   transition: 0.3s ease;
   background: $purple;
@@ -46,39 +51,21 @@
 
   }
 }
+// .motherfucker:hover >.cachette-left {
+//   -ms-transform: translate(100%, 0%);
+//   -webkit-transform: translate(100%, 0%);
+//   transform: translate(100%, 0%);
+// }
 
-.motherfucker:hover >.nav-bando{
-  -ms-transform: scaleX(30);
-  -webkit-transform: scaleX(30);
-  transform: scaleX(30);
-}
-
-.button-line-left {
-  position: absolute;
-  top: 50%;
-  left:0;
-  margin-top: -5vh;
-  height: 10vh;
-  width: 50%;
-  background: transparent;
-}
-.button-line-right {
-  position: absolute;
-  top: 50%;
-  right:0;
-  margin-top: -5vh;
-  height: 10vh;
-  width: 50%;
-  background: transparent;
-}
-
-#middle {
-  width:16%;
+#paddo {
   height: 100%;
+  width: 30vh;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
+
 .btn-navbar {
   // background:white;
-  width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
   color: $purple;
@@ -94,5 +81,29 @@
     transform: scale(1.1);
   }
 }
+.motion {
+  width: 0px !important;
+}
+#cachette-right {
+  position:absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5vh;
+  width: 50%;
+  height: 10vh;
+  background: $purple;
+  transform-origin: top right !important;
+  transition-duration: 2.5s;
+}
 
-
+#cachette-left {
+  position:absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -5vh;
+  width: 50%;
+  height: 10vh;
+  background: $purple;
+  transform-origin: top left !important;
+  transition-duration: 2.5s;
+}
