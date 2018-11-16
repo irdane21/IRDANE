@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :sites
   resources :articles
   resources :videos
+  resources :contacts, only: [:new, :create]
   resources :sitephotos, only: [:index, :new, :create, :destroy]
   get '/dashboard', to: 'accounts#dashboard'
 end
