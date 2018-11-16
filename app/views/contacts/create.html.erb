@@ -1,0 +1,13 @@
+<%= render 'shared/navbar' %>
+<div class="skinny_wrapper wrapper-padding">
+  <h1>Thank you for your message!</h1>
+  <p>I'll get back to you soon. </p>
+  <div>
+    <% flash.each do |key, value| %>
+      <div>
+        <a href="#" data-dismiss="alert">×</a>
+          <%= value %>
+      </div>
+    <% end %>
+  </div>
+</div>
