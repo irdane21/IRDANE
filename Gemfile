@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'anime_js_rails'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
