@@ -1,0 +1,27 @@
+.padding {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.wrapper-contact {
+  background: #FFF;
+  color: $orange;
+  text-align: center;
+  h3 {
+    color: $orange !important;
+  }
+  p {
+    color: $orange !important;
+  }
+  .btn-warning {
+    background: #f96919 !important;
+    letter-spacing: .2rem;
+    transition: 0.3s ease;
+  }
+  .btn-warning:hover {
+    transition: 0.3s ease;
+    text-decoration: none;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
