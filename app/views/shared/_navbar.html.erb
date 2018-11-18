@@ -1,27 +1,32 @@
 <div class="navbar-perso">
   <div class="nav-bando">
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
+    <div class="left-nav-part">
+      <div>
+        <%= link_to "Home", "/", class: "btn btn-navbar"%>
+      </div>
+      <div>
+        <%= link_to "Websites", sites_path, class: "btn btn-navbar"%>
+      </div>
+      <div>
+        <%= link_to "Graphic Design", creations_path, class: "btn btn-navbar"%>
+      </div>
     </div>
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
+    <div id="paddo">
     </div>
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
-    </div>
-    <div id="paddo"></div>
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
-    </div>
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
-    </div>
-    <div>
-      <%= link_to "website", sites_path, class: "btn btn-navbar"%>
+    <div class="right-nav-part">
+      <div>
+        <%= link_to "Videos", videos_path, class: "btn btn-navbar"%>
+      </div>
+      <div>
+        <%= link_to "Articles", articles_path, class: "btn btn-navbar"%>
+      </div>
+      <div>
+        <%= link_to "Contact", new_contact_path, class: "btn btn-navbar"%>
+      </div>
     </div>
   </div>
   <div class="motherfucker" id="tada">
-    <%= image_tag "Netgradientstroke.png", class: "logo", id: "logo" %>
+    <%= image_tag "banner-logo.png", class: "logo", id: "logo" %>
   </div>
   <div id="cachette-left"></div>
   <div id="cachette-right"></div>

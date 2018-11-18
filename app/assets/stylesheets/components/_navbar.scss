@@ -27,7 +27,7 @@
   background: white;
   transition-duration: 2.5s;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -42,6 +42,7 @@
   transition: 0.3s ease;
   background: $purple;
   z-index:10;
+  padding: 2vh;
   &:hover {
     transition: 0.3s ease;
     text-decoration: none;
@@ -106,4 +107,22 @@
   background: $purple;
   transform-origin: top left !important;
   transition-duration: 2.5s;
+}
+
+.left-nav-part {
+  height: 100%;
+  flex: 1 1 auto;
+  padding-right: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-nav-part {
+  height: 100%;
+  flex: 1 1 auto;
+  padding-right: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
