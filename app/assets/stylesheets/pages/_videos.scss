@@ -9,7 +9,7 @@
 }
 
 .channel-header {
-  padding-bottom: 5vh;
+  padding: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,10 +26,14 @@
   width: 90%;
   margin: 0 auto;
   background-color: $purple;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  box-shadow: 0rem 0.5rem 0.5rem $orange;
 }
 
 .one-video {
   width: 100%;
+  margin-top: 3vh;
 }
 
 .description-video {
