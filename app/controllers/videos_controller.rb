@@ -3,9 +3,8 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
-    @videos = Video.all
-    raise
+    @creativ = Video.where(collection: "Creativ Construction")
+    @adrien = Video.where(collection: "Adrien Lefrancq")
   end
 
   def show
@@ -29,7 +28,7 @@ class VideosController < ApplicationController
   end
 
   def update
-    if @video.update(site_params)
+    if @video.update(video_params)
       redirect_to dashboard_path
     else
       render :edit

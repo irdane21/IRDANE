@@ -7,21 +7,23 @@
       <div class="g-ytsubscribe" data-channelid="UCddE5znXiM2pl15WUtI1_lQ" data-layout="default" data-count="hidden"></div>
     </div>
     <div class="container overflow">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="description-video">
-            <p><strong>Je suis le titre de la video</strong><br><br>
-            Je suis la derscrioption de la video et on s'en bat les couilles a vrai dire de la description de la video</p>
+      <%= @creativ.each do |video| %>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="description-video">
+              <p><strong><%= video.title %></strong><br><br>
+              <%= video.description %></p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="one-video">
-            <div class="display-video">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/8XYH1VBx3-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col-md-6">
+            <div class="one-video">
+              <div class="display-video">
+                <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -32,22 +34,24 @@
       <script src="https://apis.google.com/js/platform.js"></script>
       <div class="g-ytsubscribe" data-channelid="UCnqpqEESZFefHIm5wzZoUQw" data-layout="default" data-count="hidden"></div>
     </div>
-   <div class="container overflow">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="description-video">
-            <p><strong>Je suis le titre de la video</strong><br><br>
-            Je suis la derscrioption de la video et on s'en bat les couilles a vrai dire de la description de la video</p>
+    <div class="container overflow">
+      <%= @adrien.each do |video| %>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="description-video">
+              <p><strong><%= video.title %></strong><br><br>
+              <%= video.description %></p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="one-video">
-            <div class="display-video">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/8XYH1VBx3-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col-md-6">
+            <div class="one-video">
+              <div class="display-video">
+                <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
