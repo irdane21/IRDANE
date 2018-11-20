@@ -1,6 +1,11 @@
 .wrapper {
   width: 100%;
 }
+
+.purple {
+  background: $purple;
+}
+
 .main{
   display: flex;
   flex-flow: row wrap;
