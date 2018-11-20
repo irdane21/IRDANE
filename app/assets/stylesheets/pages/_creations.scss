@@ -48,7 +48,7 @@
   animation: bloom ease-in-out .75s forwards;
 }
 .figure:hover::before {
-    animation: circle .75s;
+  animation: circle .75s;
 }
 
 @keyframes bloom {
