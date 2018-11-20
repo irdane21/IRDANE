@@ -1,18 +1,18 @@
 .website-wrapper {
   width: 100%;
-  height: 200vh;
+  height: 116vh;
   background: $white;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
 }
 .site-card {
-  margin-top: 15vh;
-  margin-bottom: 5vh;
   width: 90%;
   height: 96vh;
   margin-left: auto;
   margin-right:auto;
   border-bottom: 0.1rem solid $purple;
   border-radius: 0.5rem;
-  box-shadow: 0.5rem 0.5rem 0.5rem #C4C4C4;
+  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
   position: relative;
   .description {
     text-align: justify;

@@ -1,6 +1,6 @@
+<%= render 'shared/navbar' %>
+<% @sites.each do |site| %>
 <div class="website-wrapper">
-  <%= render 'shared/navbar' %>
-  <% @sites.each do |site| %>
     <div class="site-card">
       <div id="slider">
         <figure>
@@ -14,10 +14,10 @@
       </div>
       <div class="description d-flex justify-content-center d-flex align-items-center ">
         <div class="description-content">
-          <p>site.description</p>
-          <%= link_to "Go visite it!", site.url, class: "btn btn-card" %>
+          <p><%= site.description %></p>
+          <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
         </div>
       </div>
     </div>
-  <% end  %>
-</div>
+  </div>
+<% end  %>
