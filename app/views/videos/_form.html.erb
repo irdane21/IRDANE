@@ -2,7 +2,7 @@
   <%= f.input :title, placeholder: @video.title %>
   <%= f.input :description, placeholder: @video.description %>
   <%= f.input :url, placeholder: @video.url %>
-  <%= f.input :collection, placeholder: @video.collection %>
+  <%= f.input :collection, collection: ["Creativ Construction", "Adrien Lefrancq"], placeholder: @video.collection %>
   <%= f.input :photo %>
   <%= f.error_notification message: 'Something went wrong' %>
   <%= f.input :photo_cache, as: :hidden %>
