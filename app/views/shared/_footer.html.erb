@@ -2,17 +2,25 @@
   <ul>
     <li>
       <div class="footer-links">
-        <a href="https://github.com/irdane21"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/irdane_21/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UCddE5znXiM2pl15WUtI1_lQ"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.linkedin.com/in/adrien-lefrancq-669bb3164/"><i class="fab fa-linkedin"></i></a>
+        <%= link_to "https://github.com/irdane21", target: :_blank do %>
+          <i class="fab fa-github"></i>
+        <% end %>
+        <%= link_to "https://www.instagram.com/irdane_21/", target: :_blank do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
+        <%= link_to "https://www.youtube.com/channel/UCddE5znXiM2pl15WUtI1_lQ", target: :_blank do %>
+          <i class="fab fa-youtube"></i>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/in/adrien-lefrancq-669bb3164/", target: :_blank do %>
+          <i class="fab fa-linkedin"></i>
+        <% end %>
       </div>
     </li>
     <li>
       <p><%= link_to "Contact form", new_contact_path %></p>
     </li>
     <li>
-     <p> <%= link_to 'Download my resume', pages_downloadFile_url %> </p>
+     <p> <%= link_to 'Download my resume', pages_downloadFile_url %></p>
     </li>
   </ul>
   <div class="footer-copyright hidden-xs hidden-sm">
