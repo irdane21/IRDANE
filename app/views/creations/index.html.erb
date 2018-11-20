@@ -1,36 +1,15 @@
 <%= render 'shared/navbar' %>
-<div class="wrapper">
+<div class="wrapper purple">
   <div class="main">
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
-    <div class="column">
-      <figure class="figure">
-        <%= image_tag 'Test-Logo-Inkind.png' %>
-      </figure>
-    </div>
+    <% @creations.each do |creation| %>
+      <div class="column">
+        <figure class="figure">
+          <%= link_to creation_path(creation.id) do %>
+            <%= cl_image_tag creation.photo, crop: :thumb, width: 300, height: 200 %>
+          <% end %>
+        </figure>
+      </div>
+    <% end %>
   </div>
 </div>
 
