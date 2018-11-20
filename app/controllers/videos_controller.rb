@@ -3,7 +3,10 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    @creativs = Video.where(collection: "Creativ Construction")
+    @adriens = Video.where(collection: "Adrien Lefrancq")
     @videos = Video.all
+    raise
   end
 
   def show
@@ -46,6 +49,6 @@ class VideosController < ApplicationController
   end
 
   def video_params
-    params.require(:video).permit(:title, :url, :photo, :photo_cache, :type, :description )
+    params.require(:video).permit(:title, :url, :photo, :photo_cache, :type, :description, :collection )
   end
 end
