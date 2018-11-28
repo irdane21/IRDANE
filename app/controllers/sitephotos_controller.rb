@@ -1,7 +1,7 @@
 class SitephotosController < ApplicationController
 
   def index
-    @sitephotos = Sitephoto.where(:site_id == params[:id])
+    @sitephotos = Sitephoto.where(site_id: params[:id])
     @site = Site.find(params[:id])
   end
 
