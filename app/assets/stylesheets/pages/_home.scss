@@ -1,7 +1,7 @@
 
 
 .banner-home-page {
-  background: rgba(31, 41, 133, 0.3);
+  background: rgb(0, 0, 0);
   width: 100%;
   height: 240vh;
   .rectangle-div {
@@ -64,7 +64,7 @@
 }
 
 .wrapper-home {
-  background: rgba(31, 41, 133, 0.3);
+  background: rgb(0, 0, 0);
   width: 100%;
   height: 270vh;
   position: relative;
@@ -245,7 +245,7 @@
   background-position: center;
 }
 .contact-work {
-  background: rgba(31, 41, 133, 0.3);
+  background: rgb(0, 0, 0);
   width: 100%;
   height: 100vh;
   padding-top: 15rem;
@@ -266,8 +266,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 119;
-    box-shadow: -0.5rem -0.5rem 0.5rem $orange;
+    z-index: 118;
+    // box-shadow: 0.5rem -0.5rem 0.5rem $orange;
   }
   .top-right {
     height: 100%;
@@ -278,8 +278,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 118;
-    box-shadow: -0.5rem -0.5rem 0.5rem $orange;
+    z-index: 119;
+    // box-shadow: 0.5rem -0.5rem 0.5rem $orange;
   }
   .bottom-left {
     height: 100%;
@@ -291,7 +291,7 @@
     bottom: 0;
     left: 0;
     z-index: 119;
-    box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    // box-shadow: -0.5rem 0.5rem 0.5rem $orange;
   }
   .bottom-right {
     height: 100%;
@@ -303,7 +303,7 @@
     bottom: 0;
     right: 0;
     z-index: 118;
-    box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    // box-shadow: -0.5rem 0.5rem 0.5rem $orange;
   }
   .carre {
     position: absolute;
@@ -346,7 +346,7 @@
 }
 
 .last-wrapper {
-  background: rgba(31, 41, 133, 0.3);
+  background: rgb(0, 0, 0);
   width: 100%;
   padding-top: 30vh;
 }
