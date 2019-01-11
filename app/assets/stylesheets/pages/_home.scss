@@ -267,8 +267,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 119;
-    box-shadow: -0.5rem -0.5rem 0.5rem $orange;
+    z-index: 118;
+    // box-shadow: 0.5rem -0.5rem 0.5rem $orange;
   }
   .top-right {
     height: 100%;
@@ -279,8 +279,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 118;
-    box-shadow: -0.5rem -0.5rem 0.5rem $orange;
+    z-index: 119;
+    // box-shadow: 0.5rem -0.5rem 0.5rem $orange;
   }
   .bottom-left {
     height: 100%;
@@ -292,7 +292,7 @@
     bottom: 0;
     left: 0;
     z-index: 119;
-    box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    // box-shadow: -0.5rem 0.5rem 0.5rem $orange;
   }
   .bottom-right {
     height: 100%;
@@ -304,7 +304,7 @@
     bottom: 0;
     right: 0;
     z-index: 118;
-    box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+    // box-shadow: -0.5rem 0.5rem 0.5rem $orange;
   }
   .carre {
     position: absolute;

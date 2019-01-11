@@ -160,8 +160,22 @@ var myAnimation = anime({
   backgroundColor: '#C4C4C4',
 });
 
-const mymotion = document.getElementById("tada")
-mymotion.addEventListener("click", (event) => {
-  const left = document.getElementById("cachette-left").classList.toggle("motion")
-  const right = document.getElementById("cachette-right").classList.toggle("motion")
+const pressed = [];
+const secretCode = 'irdanedash';
+window.addEventListener('keyup', (e)=> {
+  pressed.push(e.key)
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
+  if (pressed.join('').includes(secretCode)) {
+    window.location.href = 'http://localhost:3000/dashboard';
+  }
 })
+const mymotion = document.getElementById("tada")
+if (mymotion == null) {
+
+} else {
+  mymotion.addEventListener("click", (event) => {
+    const left = document.getElementById("cachette-left").classList.toggle("motion")
+    const right = document.getElementById("cachette-right").classList.toggle("motion")
+  })
+}
+
