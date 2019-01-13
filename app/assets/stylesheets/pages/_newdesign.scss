@@ -30,12 +30,11 @@ header::after {
 
 #bandeau {
   flex: 0 0 300px;
-  height: 200vh;
+  height: 300vh;
   background-image: linear-gradient(#d195f9, #cde8f6);
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0;
   left: 0;
-  // box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5);
 }
 
 .container-newdesign {
@@ -48,11 +47,44 @@ header::after {
 }
 
 .carda {
-  background: $orange;
   width: 100%;
   height: 500px;
-  margin-top: calc((100vh - 500px)/2)
+  margin-top: calc(( 100vh - 500px)/2);
+  margin-bottom: calc(( 100vh - 500px)/2);
+  display: flex;
+  background: transparent;
 }
+
+.transition {
+  width: 100%;
+  height: 300px;
+  background: blue;
+
+  clip-path: polygon(300px 0%, 100% 300px);
+  -webkit-clip-path: polygon(300px 0%, 100% 300px);
+}
+
+// .transition::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 300px;
+//   width: 100%;
+//   background-color: red;
+//   clip-path: polygon(300px 0%, 100% 300px);
+//   -webkit-clip-path: polygon(300px 0%, 100% 300px);
+// }
+// .separator {
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 100% 100px 0 0;
+//   border-color: white #cde8f6 transparent transparent;
+// }
+// .separator.reverse {
+//   transform: rotateY(180deg);
+// }
 
 h1 {
   padding: 100px 0;

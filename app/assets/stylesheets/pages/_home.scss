@@ -126,13 +126,13 @@
     position: absolute;
     height: 100%;
     width: 30%;
-    background: $purple;
+    background: #cde8f6;
   }
   .equilibre {
       height: 90%;
       z-index: 1111;
       width: 40%;
-      background: $purple;
+      background: #cde8f6;
       position: absolute;
       margin: 3%;
       color: #fff;
@@ -140,7 +140,7 @@
   .content {
     width: 50%;
     height: 100%;
-    background: $purple;
+    background: #cde8f6;
     box-sizing: box-shadow;
     transform: skew(-10deg);
     transform-origin: bottom;
@@ -151,14 +151,14 @@
     width: 60%;
     height: calc(100% - 2rem);
     margin-top: 2rem;
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), image-url('travel-share-2.png') ;
+    background: image-url('travel-share-2.png');
     background-size: cover;
     background-position: center;
   }
 }
 
 .section-gauche:after {
-  box-shadow: 0.5rem 0.5rem 0.5rem $orange;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.2);
   position: absolute;
   content: '';
   width: 100%;
@@ -186,13 +186,13 @@
     right: 0;
     height: 100%;
     width: 30%;
-    background: $purple;
+    background: #cde8f6;
   }
   .equilibre {
       z-index: 1111;
       height: 90%;
       width: 40%;
-      background: #2b1236;
+      background: #cde8f6;
       position: absolute;
       right: 0;
       margin: 3%;
@@ -201,7 +201,7 @@
   .content {
     width: 50%;
     height: 100%;
-    background: #2b1236;
+    background: #cde8f6;
     box-sizing: box-shadow;
     transform: skew(10deg);
     transform-origin: bottom;
@@ -211,7 +211,7 @@
   .imagebox {
     width: 60%;
     height: calc(100% - 2rem);
-    background: linear-gradient(rgba(10, 10, 10, 0.1),rgba(10,10,10,0.3)), image-url('Test-Logo-Inkind.png') ;
+    background: image-url('Test-Logo-Inkind.png') ;
     background-size: cover;
     background-position: center;
     margin-top: 2rem;
@@ -219,7 +219,7 @@
 }
 
 .section-droit:after {
-  box-shadow: -0.5rem 0.5rem 0.5rem $orange;
+  box-shadow: -0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.2);
   position: absolute;
   content: '';
   width: 100%;
