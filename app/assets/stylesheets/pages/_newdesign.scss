@@ -1,7 +1,7 @@
 header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(#cde8f6, #d195f9);
+  background-image: linear-gradient(#A0CBC9, #D8726C);
 }
 
 header::after {
@@ -11,7 +11,7 @@ header::after {
   left: 0;
   height: 300px;
   width: 100%;
-  background-color: #d195f9;
+  background-color: #D8726C;
   clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
   -webkit-clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
 }
@@ -28,16 +28,25 @@ header::after {
   position: relative;
 }
 
-#bandeau {
+#bandeau1 {
   flex: 0 0 300px;
-  height: 300vh;
-  background-image: linear-gradient(#d195f9, #cde8f6);
+  height: 250vh;
+  background-image: linear-gradient(#D8726C, #A0CBC9);
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0;
   left: 0;
 }
 
-.container-newdesign {
+#bandeau2 {
+  flex: 0 0 300px;
+  height: 250vh;
+  background-image: linear-gradient(#A0CBC9, #D8726C);
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0;
+  left: 100%;
+}
+
+.container-newdesign1 {
   position: absolute;
   top: 0;
   left: 300px;
@@ -46,45 +55,104 @@ header::after {
   background: $white;
 }
 
+.container-newdesign2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 300px);
+  height: 100%;
+  background: $white;
+}
+
 .carda {
   width: 100%;
   height: 500px;
-  margin-top: calc(( 100vh - 500px)/2);
-  margin-bottom: calc(( 100vh - 500px)/2);
-  display: flex;
-  background: transparent;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  background: image-url('travel-share-2.png');
+  background-size: cover;
+  transition: 0.3s ease;
+  background-position: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
+
+.carda:hover {
+  transition: 0.3s ease;
+  background: linear-gradient(rgba(144, 166, 248, 0.5), rgba(144, 166, 248, 0.8)),image-url('travel-share-2.png');
+  background-size: cover;
+  background-position: center;
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+  .carda-button {
+    opacity: 1;
+  }
+}
+
+.carda-text {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  height: 25%;
+  background: rgb(144, 166, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.carda-button {
+  width: 100%;
+  height: 75%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .transition {
   width: 100%;
   height: 300px;
-  background: blue;
-
-  clip-path: polygon(300px 0%, 100% 300px);
-  -webkit-clip-path: polygon(300px 0%, 100% 300px);
+  background: #A0CBC9;
+  position: relative;
 }
 
-// .transition::after {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 300px;
-//   width: 100%;
-//   background-color: red;
-//   clip-path: polygon(300px 0%, 100% 300px);
-//   -webkit-clip-path: polygon(300px 0%, 100% 300px);
-// }
-// .separator {
-//   width: 0;
-//   height: 0;
-//   border-style: solid;
-//   border-width: 100% 100px 0 0;
-//   border-color: white #cde8f6 transparent transparent;
-// }
-// .separator.reverse {
-//   transform: rotateY(180deg);
-// }
+.transition::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  background-color: white;
+  clip-path: polygon(300px 0%, 100% 300px, 100% 0);
+  -webkit-clip-path: polygon(300px 0%, 100% 300px, 100% 0);
+}
+.separator {
+  width: 100%;
+  height: 300px;
+  background: white;
+  position: relative;
+}
+
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  background-color: #A0CBC9;
+  clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
+  -webkit-clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
+}
+
 
 h1 {
   padding: 100px 0;
