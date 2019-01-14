@@ -1,112 +1,86 @@
-<div class="banner-home-page">
-  <div class="rectangle-div">
-    <div class="b-l"></div>
-    <div class="b-r"></div>
-    <div class="gradient-div d-flex justify-content-center">
-      <div class="banner-logo"></div>
-      <%= render 'shared/irdane' %>
+
+<header>
+  <h1>IRDANE</h1>
+  <h2>Welcome to my Portfolio</h2>
+</header>
+<div class="vide-newdesign"></div>
+<section class="section-home">
+  <div id="bandeau1">
+    <div class="titre-home1 rotate1">
+      <h2>WEBSITES</h2>
     </div>
-    <div class="banner-text">
-      <h1>
-        Welcome to my portfolio
-      </h1>
+    <div class="titre-home2 rotate1">
+      <h2>GRAPHIC DESIGN</h2>
     </div>
   </div>
-</div>
-<div class="wrapper-home">
-
-  <section class="section-1 section-gauche">
-    <div class="rectangle-cache"></div>
-    <div class="equilibre d-flex align-items-center">
-      <div>
-        <div class="title">
-          <h2>Websites</h2>
+  <div class="container container-newdesign1">
+    <div class="row justify-content-lg-center">
+      <div class="col col-lg-10">
+        <%= link_to sites_path do %>
+          <div class="carda imageBack1">
+            <div class="carda-text">
+              <p>
+                Here you can find all my creations or project that I worked on it. At school with Le Wagon or by myself aside.
+              </p>
+            </div>
+          </div>
+        <% end %>
         </div>
-        <p>
-          "je peux pas êttre son portrait cracher, est ce que l'absence de modèle l'empêche d'être un papa poule , j'ai pas besoin de ça il apas besoin de ça , au final tout ce qu'il reste des sentiments gaché, constence c'est mon
-        </p>
-        <div class="card-btn">
-          <%= link_to "See more", sites_path, class: "btn btn-home-card" %>
-        </div>
+      <div class="col col-lg-10">
+        <%= link_to creations_path do %>
+          <div class="carda imageBack2">
+            <div class="carda-text">
+              <p>
+                I started the graphic design as a hoobie 2 years ago and step by step I improved my skills. Take a look!
+              </p>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-    <div class="content">
-
-    </div>
-    <div class="imagebox">
-    </div>
-  </section>
-
-  <section class="section-2 section-droit">
-    <div class="imagebox">
-    </div>
-    <div class="rectangle-cache"></div>
-    <div class="equilibre d-flex align-items-center">
-      <div>
-        <div class="title">
-          <h2>Graphic Design</h2>
-        </div>
-        <p>
-          "je peux pas êttre son portrait cracher, est ce que l'absence de modèle l'empêche d'être un papa poule , j'ai pas besoin de ça il apas besoin de ça , au final tout ce
-        </p>
-        <div class="card-btn">
-          <%= link_to "See more", creations_path, class: "btn btn-home-card" %>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-    </div>
-  </section>
-
-</div>
-<div class="contact-work">
-  <div class="content">
-    <div class="top-right"></div>
-    <div class="top-left"></div>
-    <div class="bottom-left"></div>
-    <div class="bottom-right"></div>
-    <div class="carre"></div>
-    <div class="masque"></div>
-    <div class="content-message">
-      <h2>Are you interested in my work?</h2>
-      <div class="choice justify-content-center">
-        <div class="left">
-          <%= link_to "Fiveer Page", sites_path, class: "btn btn-home-card" %>
-        </div>
-        <div class="right">
-          <%= link_to "Autre Page", sites_path, class: "btn btn-home-card" %>
-        </div>
-      </div>
-
     </div>
   </div>
+</section>
+<div class="transition">
+  <div class="transition-title">
+    <h2>HOOBIES</h2>
+  </div>
 </div>
-</div>
-<div class="last-wrapper">
-  <div class="hobbies">
-    <div class="hobbies-left"></div>
-    <div class="hobbies-right"></div>
-      <div class="hobbiestitle">
-        <h2>Hobbies</h2>
-      </div>
-    <div class="card-perso">
-      <div class="gauche d-flex justify-content-center align-items-center">
-        <div class="titre-perso">
-          <h3>Videos</h3>
-        </div>
+<div class="separator"></div>
+<section class="section-home">
+  <div class="container container-newdesign2">
+    <div class="row justify-content-lg-center">
+      <div class="col col-lg-10">
         <%= link_to videos_path do %>
-          <i class="fas fa-search"></i>
+          <div class="carda imageBack3">
+            <div class="carda-text">
+              <p>
+                For my family or myself I'm recording, editing and publishing videos. If you're curious and not to scared, check it!
+              </p>
+            </div>
+          </div>
         <% end %>
       </div>
-      <div class="droite d-flex justify-content-center align-items-center">
-        <div class="titre-perso">
-          <h3>Articles</h3>
-        </div>
+       <div class="col col-lg-10">
         <%= link_to articles_path do %>
-          <i class="fas fa-search"></i>
+          <div class="carda imageBack4">
+            <div class="carda-text">
+              <p>
+                I created this category as a motivation for write my thoughts and share it with the world.
+              </p>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
-</div>
+  <div id="bandeau2">
+    <div class="titre-home3 rotate2">
+      <h2>VIDEOS</h2>
+    </div>
+    <div class="titre-home4 rotate2">
+      <h2>ARTICLES</h2>
+    </div>
+  </div>
+</section>
+
 
