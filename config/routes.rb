@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :sitephotos, only: [:index, :new, :create, :destroy]
   get '/dashboard', to: 'accounts#dashboard'
+  get '/newdesign', to: 'pages#newdesign'
 end
