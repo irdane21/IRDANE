@@ -1,7 +1,8 @@
 header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(#A0CBC9, #D8726C);
+  // background-image: linear-gradient(#A0CBC9, #D8726C);
+  background-image: linear-gradient(#97D8E0, #F0595A);
 }
 
 header::after {
@@ -11,7 +12,7 @@ header::after {
   left: 0;
   height: 300px;
   width: 100%;
-  background-color: #D8726C;
+  background-color: #F0595A;
   clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
   -webkit-clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
 }
@@ -25,40 +26,86 @@ header::after {
 .section-home {
   background: white;
   display: flex;
-  position: relative;
 }
 
 #bandeau1 {
-  flex: 0 0 300px;
-  height: 250vh;
-  background-image: linear-gradient(#D8726C, #A0CBC9);
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0;
-  left: 0;
+  width: 300px;
+  height: 1800px;
+  background-image: linear-gradient(#F0595A, #97D8E0);
+  position: relative; /* !important to override Gmaps inline CSS */
 }
 
 #bandeau2 {
-  flex: 0 0 300px;
-  height: 250vh;
-  background-image: linear-gradient(#A0CBC9, #D8726C);
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0;
-  left: 100%;
+  width: 300px;
+  height: 1800px;
+  background-image: linear-gradient(#97D8E0, #F0595A);
+  position: relative; /* !important to override Gmaps inline CSS */
+}
+
+.titre-home1 {
+  width: 600px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  top: 750px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre-home2 {
+  width: 800px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  top: 1750px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre-home3 {
+  width: 600px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  top: 550px;
+  left: -550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre-home4 {
+  width: 600px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  top: 1450px;
+  left: -550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rotate1 {
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+.rotate2 {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
 }
 
 .container-newdesign1 {
-  position: absolute;
-  top: 0;
-  left: 300px;
   width: calc(100% - 300px);
   height: 100%;
   background: $white;
 }
 
 .container-newdesign2 {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: calc(100% - 300px);
   height: 100%;
   background: $white;
@@ -77,14 +124,11 @@ header::after {
   border-top-right-radius: 3px;
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
-  box-shadow: 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0rem 0.5rem 0.5rem rgba(120, 139, 168, 0.5);
 }
 
 .carda:hover {
   transition: 0.3s ease;
-  background: linear-gradient(rgba(144, 166, 248, 0.5), rgba(144, 166, 248, 0.8)),image-url('travel-share-2.png');
-  background-size: cover;
-  background-position: center;
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
@@ -99,7 +143,7 @@ header::after {
   border-top-right-radius: 3px;
   width: 100%;
   height: 25%;
-  background: rgb(144, 166, 248);
+  background: #788BA8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +163,7 @@ header::after {
 .transition {
   width: 100%;
   height: 300px;
-  background: #A0CBC9;
+  background: #97D8E0;
   position: relative;
 }
 
@@ -148,7 +192,7 @@ header::after {
   left: 0;
   height: 300px;
   width: 100%;
-  background-color: #A0CBC9;
+  background-color: #97D8E0;
   clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
   -webkit-clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
 }
