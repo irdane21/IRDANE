@@ -1,6 +1,6 @@
 header {
   position: relative;
-  height: 100vh;
+  height: 800px;
   // background-image: linear-gradient(#A0CBC9, #D8726C);
   background-image: linear-gradient(#97D8E0, #F0595A);
 }
@@ -45,7 +45,6 @@ header::after {
 .titre-home1 {
   width: 600px;
   height: 200px;
-  background: red;
   position: absolute;
   top: 750px;
   left: 50px;
@@ -57,7 +56,6 @@ header::after {
 .titre-home2 {
   width: 800px;
   height: 200px;
-  background: red;
   position: absolute;
   top: 1750px;
   left: 50px;
@@ -69,7 +67,6 @@ header::after {
 .titre-home3 {
   width: 600px;
   height: 200px;
-  background: red;
   position: absolute;
   top: 550px;
   left: -550px;
@@ -81,7 +78,6 @@ header::after {
 .titre-home4 {
   width: 600px;
   height: 200px;
-  background: red;
   position: absolute;
   top: 1450px;
   left: -550px;
@@ -92,11 +88,15 @@ header::after {
 .rotate1 {
   transform: rotate(-90deg);
   transform-origin: top left;
+  opacity: 0;
+  transition: all .5s;
 }
 
 .rotate2 {
   transform: rotate(90deg);
   transform-origin: bottom right;
+  opacity: 0;
+  transition: all .5s;
 }
 
 .container-newdesign1 {
@@ -111,20 +111,48 @@ header::after {
   background: $white;
 }
 
+.rotate1.active {
+  opacity: 1;
+}
+
+.rotate2.active {
+  opacity: 1;
+}
+
 .carda {
   width: 100%;
   height: 500px;
   margin-top: 200px;
   margin-bottom: 200px;
-  background: image-url('travel-share-2.png');
-  background-size: cover;
   transition: 0.3s ease;
-  background-position: center;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
   box-shadow: 0rem 0.5rem 0.5rem rgba(120, 139, 168, 0.5);
+}
+.imageBack1 {
+background: image-url('travel-share-2.png');
+background-size: cover;
+background-position: center;
+}
+
+.imageBack2 {
+background: image-url('Test-Logo-Inkind.png');
+background-size: cover;
+background-position: center;
+}
+
+.imageBack3 {
+background: image-url('video-home.png');
+background-size: cover;
+background-position: center;
+}
+
+.imageBack4 {
+background: image-url('article-home.png');
+background-size: cover;
+background-position: center;
 }
 
 .carda:hover {
@@ -132,7 +160,6 @@ header::after {
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-
   .carda-button {
     opacity: 1;
   }
@@ -148,6 +175,9 @@ header::after {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  p {
+    text-decoration: none !important;
+  }
 }
 
 .carda-button {
