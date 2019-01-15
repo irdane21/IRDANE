@@ -69,4 +69,11 @@ if (mymotion == null) {
     const right = document.getElementById("cachette-right").classList.toggle("motion")
   })
 }
+const menu = document.getElementById("logo-mini")
+
+function showMenu() {
+  document.getElementById("myDropDownMenu").classList.toggle("show");
+}
+
+menu.addEventListener('click', showMenu)
 
