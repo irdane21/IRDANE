@@ -2,28 +2,51 @@
 <div class="website-wrapper">
   <div class="container">
     <div class="row justify-content-center">
-      <% @sites.each do |site| %>
-        <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
-          <div class="site-card">
-            <div id="slider">
-              <figure>
-                <% site.sitephotos.each do |photo| %>
-                  <%= cl_image_tag photo.photo %>
-                <% end %>
-              </figure>
-            </div>
-            <div class="title-sites">
-              <h2><%= site.title %></h2>
-            </div>
-            <div class="description d-flex justify-content-center d-flex align-items-center ">
-              <div class="description-content">
-                <p><%= site.description %></p>
-                <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
+      <div class="big-device">
+        <% @sites.each do |site| %>
+          <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
+            <div class="site-card">
+              <div id="slider">
+                <figure>
+                  <% site.sitephotos.each do |photo| %>
+                    <%= cl_image_tag photo.photo %>
+                  <% end %>
+                </figure>
+              </div>
+              <div class="title-sites">
+                <h2><%= site.title %></h2>
+              </div>
+              <div class="description d-flex justify-content-center d-flex align-items-center ">
+                <div class="description-content">
+                  <p><%= site.description %></p>
+                  <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
+                </div>
               </div>
             </div>
           </div>
+        <% end %>
+      </div>
+      <div class="small-device">
+        <div class="container">
+          <div class="row justify-content-center">
+            <% @sites.each do |site| %>
+              <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
+                <div class="site-card-mini">
+                  <div class="title-sites-mini">
+                    <h2><%= site.title %></h2>
+                  </div>
+                  <div class="description-mini d-flex justify-content-center d-flex align-items-center ">
+                    <div class="description-content">
+                      <p><%= site.description %></p>
+                      <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
