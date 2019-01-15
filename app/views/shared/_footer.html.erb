@@ -1,29 +1,38 @@
 <div class="footer">
-  <ul>
-    <li>
-      <div class="footer-links">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-sm-12 col-xl-3 col-lg-3">
         <%= link_to "https://github.com/irdane21", target: :_blank do %>
           <i class="fab fa-github"></i>
         <% end %>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xl-3 col-lg-3">
         <%= link_to "https://www.instagram.com/irdane_21/", target: :_blank do %>
           <i class="fab fa-instagram"></i>
         <% end %>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xl-3 col-lg-3">
         <%= link_to "https://www.youtube.com/channel/UCddE5znXiM2pl15WUtI1_lQ", target: :_blank do %>
           <i class="fab fa-youtube"></i>
         <% end %>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xl-3 col-lg-3">
         <%= link_to "https://www.linkedin.com/in/adrien-lefrancq-669bb3164/", target: :_blank do %>
           <i class="fab fa-linkedin"></i>
         <% end %>
       </div>
-    </li>
-    <li>
-      <p><%= link_to "Contact form", new_contact_path %></p>
-    </li>
-    <li>
-     <p> <%= link_to 'Download my resume', pages_downloadFile_url %></p>
-    </li>
-  </ul>
-  <div class="footer-copyright hidden-xs hidden-sm">
-    <p>This website is made by <%= link_to "I", dashboard_path %>rdane</p>
+      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+        <p><%= link_to "Contact form", new_contact_path %></p>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+        <p> <%= link_to 'Download my resume', pages_downloadFile_url %></p>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+        <p><%= link_to "Contact form", new_contact_path %></p>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+        <p>This website is made by <%= link_to "I", dashboard_path %>rdane</p>
+      </div>
+    </div>
   </div>
 </div>
