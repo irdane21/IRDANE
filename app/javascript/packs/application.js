@@ -24,8 +24,8 @@ function checkSlide(e) {
     const slideInAt = (window.scrollY + window.innerHeight);
 
     // bottom of the image
-    const imageBottom = sliderImage.offsetTop + 900
-    const isHalfShown = slideInAt > (sliderImage.offsetTop + 950);
+    const imageBottom = sliderImage.offsetTop + window.innerHeight + 100
+    const isHalfShown = slideInAt > (sliderImage.offsetTop + 200 + window.innerHeight);
     const isNotScrolledPast = window.scrollY < imageBottom;
 
     if(isHalfShown && isNotScrolledPast) {
@@ -37,8 +37,8 @@ function checkSlide(e) {
   sliderTitles.forEach(sliderTitle => {
     const slideInAt = (window.scrollY + window.innerHeight);
 
-    const imageBottom = sliderTitle.offsetTop + 3350
-    const isHalfShown = slideInAt > (sliderTitle.offsetTop + 3350);
+    const imageBottom = sliderTitle.offsetTop + 2550 + window.innerHeight
+    const isHalfShown = slideInAt > (sliderTitle.offsetTop + 2550 + window.innerHeight);
     const isNotScrolledPast = window.scrollY < imageBottom;
 
     if(isHalfShown && isNotScrolledPast) {
