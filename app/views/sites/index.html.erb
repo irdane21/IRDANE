@@ -6,17 +6,14 @@
         <% @sites.each do |site| %>
           <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
             <div class="site-card">
-              <div id="slider">
-                <figure>
-                  <% site.sitephotos.each do |photo| %>
-                    <%= cl_image_tag photo.photo %>
-                  <% end %>
-                </figure>
-              </div>
               <div class="title-sites">
                 <h2><%= site.title %></h2>
               </div>
-              <div class="description d-flex justify-content-center d-flex align-items-center ">
+              <div class="site-card-image">
+                <%= cl_image_tag site.photo, :width => :auto, :crop => :scale, :responsive => :true,
+  :responsive_placeholder => "blank"%>
+              </div>
+              <div class="description">
                 <div class="description-content">
                   <p><%= site.description %></p>
                   <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
