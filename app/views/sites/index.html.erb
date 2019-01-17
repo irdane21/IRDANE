@@ -9,9 +9,8 @@
               <div class="title-sites">
                 <h2><%= site.title %></h2>
               </div>
-              <div class="site-card-image">
-                <%= cl_image_tag site.photo, :width => :auto, :crop => :scale, :responsive => :true,
-  :responsive_placeholder => "blank"%>
+              <div class="site-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>')">
               </div>
               <div class="description">
                 <div class="description-content">
