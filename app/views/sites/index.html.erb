@@ -5,18 +5,15 @@
       <div class="big-device">
         <% @sites.each do |site| %>
           <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
-            <div class="site-card">
+            <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;" class="site-card">
               <div class="title-sites">
                 <h2><%= site.title %></h2>
-              </div>
-              <div class="site-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>')">
-              </div>
-              <div class="description">
                 <div class="description-content">
                   <p><%= site.description %></p>
                   <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
                 </div>
+                <div class="fleche"></div>
               </div>
             </div>
           </div>

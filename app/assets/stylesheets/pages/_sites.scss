@@ -2,60 +2,80 @@
   width: 100%;
   background: $white;
 }
+
+.big-device {
+  width: 100%;
+}
 .site-card {
   width: 100%;
   height: 80vh;
   min-height: 500px;
   margin: 150px 0;
-  // background: url('travel-share-3.png');
-  background-size: cover;
-  background-position: center;
   border-radius: 0.5rem;
   box-shadow: 0rem 0.5rem 0.5rem rgba(239, 99, 78, 0.5);
-  position: relative;
-  .description {
-    height: calc(100% - 96px - 61px);
-    width: 100%;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
-  .description:hover {
-    height: calc(100% - 96px - 61px);
-    width: 100%;
-    transition: 0.3s ease;
-    background: radial-gradient(#356571, #41737C);
-    opacity: 0.8;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
+  transition: 0.3s ease;
 }
 
-.site-card-image {
-  width: 100%;
-  height: 100%;
-  // flex: 1 1 auto;
+.site-card:hover {
+  .title-sites {
+    height: 80%;
+  }
 
+  .title-sites .description-content {
+    opacity: 1;
+  }
 }
 
 .title-sites {
-  padding: 0.5rem;
+  transition: height 1s;
+  -moz-transition: height 1s;
+  -webkit-transition: height 1s;
+  position: relative;
+  padding: 0.2rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   background: $blue;
   width: 100%;
+  height: 100px;
   h2 {
-    padding: 0.1rem;
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
 }
+
+.fleche{
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 200px);
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 50px solid $blue;
+}
+
 .description-content {
-  width: 80%;
+  -webkit-transition-property: opacity; /* Safari */
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  padding: 3rem;
+  width: 100%;
   text-align: justify;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-card {
-  margin-top: 4%;
-  padding: 1rem 5%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  margin-bottom: 30px;
+  width: 80%;
+  padding: 1rem;
   background-color: transparent;
   color: #ffffff;
   transition: 0.3s ease;
@@ -79,6 +99,10 @@
   .small-device {
     display: none;
   }
+}
+
+.small-device {
+  width: 100%;
 }
 
 .site-card-mini {
