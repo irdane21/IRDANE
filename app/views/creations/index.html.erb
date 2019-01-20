@@ -1,15 +1,17 @@
 <%= render 'shared/navbar' %>
-<div class="wrapper purple">
-  <div class="main">
-    <% @creations.each do |creation| %>
-      <div class="column">
-        <figure class="figure">
-          <%= link_to creation_path(creation.id) do %>
-            <%= cl_image_tag creation.photo, crop: :thumb, width: 300, height: 200 %>
-          <% end %>
-        </figure>
-      </div>
-    <% end %>
+<div class="wrapper white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <% @creations.each do |creation| %>
+        <div class="col-md-6 col-sm-12 col-xl-4 col-lg-6 no-padding">
+          <figure class="figure">
+            <%= link_to creation_path(creation.id) do %>
+              <%= cl_image_tag creation.photo, crop: :thumb, width: 300, height: 200 %>
+            <% end %>
+          </figure>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
