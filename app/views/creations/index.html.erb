@@ -8,6 +8,7 @@
             <%= link_to creation_path(creation.id) do %>
               <%= cl_image_tag creation.photo, crop: :thumb, width: 300, height: 200 %>
             <% end %>
+            <button class="btn btn-photo"><p>See More</p></button>
           </figure>
         </div>
       <% end %>
