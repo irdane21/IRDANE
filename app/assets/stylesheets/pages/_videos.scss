@@ -14,29 +14,18 @@
   padding-bottom: 15vh;
 }
 
-.channel-content-1 {
+.channel-content {
   padding: 5vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.channel-content-2 {
-  padding: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.purple-title {
-  color: $purple !important;
-}
 .overflow {
   overflow: scroll;
   height: 80vh;
 
 }
-.video-wrapper {
+.video-card-wrapper {
   margin-top: 15vh;
   margin-bottom: 15vh;
   width: 90%;
