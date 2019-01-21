@@ -1,5 +1,7 @@
 import "bootstrap";
 
+// function for show side Title when scroll down home page
+
 function debounce(func, wait = 25, immediate = true) {
   var timeout;
   return function() {
@@ -51,6 +53,8 @@ function checkSlide(e) {
 
 window.addEventListener('scroll', debounce(checkSlide));
 
+// Event listener code pour dashboard
+
 const pressed = [];
 const secretCode = 'irdanedash';
 window.addEventListener('keyup', (e)=> {
@@ -60,6 +64,8 @@ window.addEventListener('keyup', (e)=> {
     window.location.href = 'http://localhost:3000/dashboard';
   }
 })
+
+// navbar animation
 const mymotion = document.getElementById("tada")
 if (mymotion == null) {
 
@@ -69,11 +75,38 @@ if (mymotion == null) {
     const right = document.getElementById("cachette-right").classList.toggle("motion")
   })
 }
+
+// dropdown menu for mobile
 const menu = document.getElementById("logo-mini")
 
 function showMenu() {
   document.getElementById("myDropDownMenu").classList.toggle("show");
 }
 
-menu.addEventListener('click', showMenu)
+if(menu != null) {
+  menu.addEventListener('click', showMenu)
+}
 
+//Shadow on title home page
+
+const hero = document.querySelector('.hero');
+const text = hero.querySelector('h1');
+const walk = 60;
+
+function shadow(e) {
+  const { offsetWidth: width, offsetHeight: height} = hero;
+  let { offsetY: y, offsetX: x } = e;
+
+  if (this !== e.target) {
+    x = x + e.target.offsetLeft;
+    y = y + e.target.offsetTop;
+  }
+  // console.log(x, y)
+
+  const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
+  const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
+
+  text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
+};
+
+hero.addEventListener('mousemove', shadow);
