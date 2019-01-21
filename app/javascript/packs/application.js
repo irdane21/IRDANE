@@ -87,15 +87,15 @@ if(menu != null) {
 
 //Shadow on title home page
 
- const hero = document.querySelector('.hero');
+const hero = document.querySelector('.hero');
 const text = hero.querySelector('h1');
 const walk = 60;
 
- function shadow(e) {
+function shadow(e) {
   const { offsetWidth: width, offsetHeight: height} = hero;
   let { offsetY: y, offsetX: x } = e;
 
-   if (this !== e.target) {
+  if (this !== e.target) {
     x = x + e.target.offsetLeft;
     y = y + e.target.offsetTop;
   }
@@ -104,10 +104,7 @@ const walk = 60;
   const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
   const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
 
-   text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
+  text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
 };
 
-
- hero.addEventListener('mousemove', shadow);
-
-
+hero.addEventListener('mousemove', shadow);
