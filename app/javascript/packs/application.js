@@ -1,7 +1,6 @@
 import "bootstrap";
 
 // function for show side Title when scroll down home page
-
 function debounce(func, wait = 25, immediate = true) {
   var timeout;
   return function() {
