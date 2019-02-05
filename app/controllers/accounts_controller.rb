@@ -6,6 +6,7 @@ class AccountsController < ApplicationController
       @creations = Creation.all
       @videos = Video.all
       @articles = Article.all
+      @games = Game.all
     else
       redirect_to user_signed_in
     end
