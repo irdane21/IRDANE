@@ -1,0 +1,15 @@
+<%= render 'shared/navbar' %>
+<div class="wrapper white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1>Which game do you want to play ?!</h1>
+      <% @games.each do |game| %>
+        <div class="col-md-6 col-sm-12 col-xl-4 col-lg-6 no-padding">
+          <%= link_to game_path(game.id) do %>
+            <h3><%= game.name %></h3>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -35,6 +35,13 @@
             </div>
           </div>
         </div>
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <div class="button">
+              <%= link_to "Game", new_game_path, class:"btn btn-success" %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="dashboard-card">
@@ -107,6 +114,20 @@
                 <p class="d-flex align-items-center"><%= article.title %></p>
                 <%= link_to "Update", edit_article_path(article.id), class:"btn btn-warning size" %>
                 <%= link_to "Delete", articles_path(article.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <h4> The games : </h4>
+        <div class="col anotherclassforstyle-left">
+          <ul class="trip-creator-col">
+            <% @games.each do |game| %>
+              <li class="d-flex justify-content-around item">
+                <p class="d-flex align-items-center"><%= game.name %></p>
+                <%= link_to "Update", edit_game_path(game.id), class:"btn btn-warning size" %>
+                <%= link_to "Delete", game_path(game.id), :method => :delete, data: {:confirm => "You sure?" }, class:"btn btn-danger size" %>
               </li>
             <% end %>
           </ul>
