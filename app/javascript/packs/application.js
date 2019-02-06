@@ -1,4 +1,4 @@
-import "bootstrap";
+ import "bootstrap";
 
 // function for show side Title when scroll down home page
 function debounce(func, wait = 25, immediate = true) {
@@ -88,23 +88,27 @@ if(menu != null) {
 //Shadow on title home page
 
 const hero = document.querySelector('.hero');
-const text = hero.querySelector('h1');
-const walk = 60;
+if (hero != null) {
 
-function shadow(e) {
-  const { offsetWidth: width, offsetHeight: height} = hero;
-  let { offsetY: y, offsetX: x } = e;
+  const text = hero.querySelector('h1');
+  const walk = 60;
 
-  if (this !== e.target) {
-    x = x + e.target.offsetLeft;
-    y = y + e.target.offsetTop;
-  }
-  // console.log(x, y)
+  function shadow(e) {
+    const { offsetWidth: width, offsetHeight: height} = hero;
+    let { offsetY: y, offsetX: x } = e;
 
-  const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
-  const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }
+    // console.log(x, y)
 
-  text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
-};
+    const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
+    const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
 
-hero.addEventListener('mousemove', shadow);
+    text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
+  };
+
+  hero.addEventListener('mousemove', shadow);
+}
+
