@@ -112,3 +112,74 @@ if (hero != null) {
   hero.addEventListener('mousemove', shadow);
 }
 
+//Game Whack a Mole
+
+const holes = document.querySelectorAll('.hole');
+if (holes != null) {
+  const scoreBoard = document.querySelector('.score');
+  const moles = document.querySelectorAll('.mole');
+  const buttonStart = document.querySelector('.startGame');
+  const tableauScoreEasy = document.querySelector('.table-easy');
+  const tableauScoreHard = document.querySelector('.table-hard');
+  const buttonHard = document.querySelector('.btn-hard');
+  const buttonEasy = document.querySelector('.btn-easy');
+
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function randHoles(holes) {
+    const idx = Math.floor(Math.random()* holes.length);
+    const hole = holes[idx];
+    if (hole === lastHole) {
+      console.log("it's the same hole");
+      return randHoles(holes);
+    }
+    lastHole = hole;
+    return hole;
+  }
+
+  function popUp(){
+    const time = randomTime(200, 1000);
+    const hole = randHoles(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) popUp();
+    }, time);
+  }
+
+  function startGame() {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    popUp()
+    setTimeout(() => {
+      timeUp = true;
+    }, 10000)
+  }
+
+  function getPoint(e) {
+    if (!e.isTrusted) return
+    score++;
+    this.classList.remove('up');
+    scoreBoard.textContent = score;
+  }
+
+  function showLadder() {
+    buttonEasy.classList.toggle('btn-active');
+    buttonHard.classList.toggle('btn-active');
+    tableauScoreHard.classList.toggle('table-hide');
+    tableauScoreEasy.classList.toggle('table-hide');
+
+  }
+
+  buttonEasy.addEventListener('click', showLadder);
+  buttonHard.addEventListener('click', showLadder);
+  moles.forEach(mole => mole.addEventListener('click', getPoint));
+  buttonStart.addEventListener('click', startGame);
+}

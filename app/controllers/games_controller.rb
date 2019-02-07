@@ -7,9 +7,12 @@ class GamesController < ApplicationController
   end
 
   def whack_a_mole
-    @parties = Partie.where(game_id: params[:id])
-    @parties.sort { |a,b| a.score <=> b.score}
-    @parties = @parties.first(5)
+    @parties_easy = Partie.where(game_id: params[:id], difficulty: "easy")
+    @parties_hard = Partie.where(game_id: params[:id], difficulty: "hard")
+    @parties_easy = @parties_easy.sort { |a,b| b.score <=> a.score}
+    @parties_hard = @parties_hard.sort { |a,b| b.score <=> a.score}
+    @parties_easy = @parties_easy.first(8)
+    @parties_hard = @parties_hard.first(8)
   end
 
   def new
