@@ -10,6 +10,7 @@
   left: 50%;
   background: #97D8E0;
  }
+
 .navbar-perso {
   width: 100%;
   height: 35vh;
@@ -174,6 +175,10 @@
     transform: scale(1.2);
 
   }
+}
+
+.btn-teste {
+  width: 400px;
 }
 
 .dropdown a:hover {background-color: #ddd;}
