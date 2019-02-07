@@ -220,10 +220,10 @@ if (holes != null) {
 
   function submitScore() {
     let name = nameInput.value;
+    instanceItInDatabase(name);
     let scoreMoved;
     let nameMoved;
     if (gameMode == "hard") {
-      instanceItInDatabase(name);
       const parties = [...tableauScoreHard.querySelectorAll('tr')];
       const scores = parties.forEach(partie => {
         const oneScore = partie.querySelector('.player-score');
@@ -257,7 +257,15 @@ if (holes != null) {
   }
 
   function instanceItInDatabase(name) {
-
+    console.log('je suis à la requète')
+    $.ajax({
+      type: "POST",
+      url: "/parties",
+      headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
+      data: { partie: { name: name, difficulty: gameMode, score: score, game: "whack a mole"}},
+    }).then((response) => {
+      console.log(response)
+    });
   }
 
 

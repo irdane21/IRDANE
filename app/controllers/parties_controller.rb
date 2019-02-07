@@ -13,6 +13,6 @@ class PartiesController < ApplicationController
   private
 
   def params_partie
-    params.require(:partie).permit(:name, :game_id, :score, :difficulty)
+    params.require(:partie).permit(:name, :game, :score, :difficulty)
   end
 end
