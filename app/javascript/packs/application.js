@@ -161,7 +161,7 @@ if (holes != null) {
 
   function popUp(){
     if (gameMode == "easy") {
-      const time = randomTime(200, 1000);
+      const time = randomTime(200, 2000);
       const hole = randHoles(holesEasy);
       hole.classList.add('up');
       setTimeout(() => {
