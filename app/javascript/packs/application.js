@@ -124,10 +124,12 @@ if (holes != null) {
   const buttonHard = document.querySelector('.btn-hard');
   const buttonEasy = document.querySelector('.btn-easy');
   const endGameMessage = document.querySelector('.end-game-message');
-  const textInput = endGameMessage.querySelector('h4');
-  const nameInput = endGameMessage.querySelector('input');
-  const buttonInput = endGameMessage.querySelector('button');
-  const holesEasy = document.querySelectorAll('.hole-easy');
+  if (endGameMessage) {
+    const textInput = endGameMessage.querySelector('h4');
+    const nameInput = endGameMessage.querySelector('input');
+    const buttonInput = endGameMessage.querySelector('button');
+    const holesEasy = document.querySelectorAll('.hole-easy');
+  }
 
   let lastHole;
   let timeUp = false;
@@ -238,7 +240,7 @@ if (holes != null) {
     winner = false;
     nameInput.classList.add('opa-city');
     buttonInput.classList.add('opa-city');
-    textInput.innerText = 'You are on the Top Ladder! Save Your score:'
+    textInput.innerText = 'You are on the Top Ladder! Save your score:'
   }
 
   function looseMessage() {
@@ -323,10 +325,53 @@ if (holes != null) {
 
   }
 
-  buttonEasy.addEventListener('click', showLadder);
-  buttonHard.addEventListener('click', showLadder);
-  moles.forEach(mole => mole.addEventListener('click', getPoint));
-  buttonStart.addEventListener('click', startGame);
-  buttonInput.addEventListener('click', submitScore);
+  if (buttonEasy) {
+    buttonEasy.addEventListener('click', showLadder);
+    buttonHard.addEventListener('click', showLadder);
+    moles.forEach(mole => mole.addEventListener('click', getPoint));
+    buttonStart.addEventListener('click', startGame);
+    buttonInput.addEventListener('click', submitScore);
+  }
 
+}
+
+
+// drag and drop creations page
+
+const slider = document.querySelector('.items');
+if (slider) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft
+    console.log(e.pageX)
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+
+    slider.scrollLeft = scrollLeft - walk;
+    console.log(startX, x)
+
+  });
 }
