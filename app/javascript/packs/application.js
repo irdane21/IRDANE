@@ -206,7 +206,7 @@ if (holes != null) {
         myArray.push(oneScore.innerText)
       })
       myArray.forEach(oldScore => {
-        if ( oldScore == "" || score >= parseInt(oldScore)) {
+        if ( oldScore == "" || oldScore == NaN || score >= parseInt(oldScore)) {
           winner = true;
         };
       })
@@ -222,7 +222,7 @@ if (holes != null) {
         myArray.push(oneScore.innerText)
       })
       myArray.forEach(oldScore => {
-        if ( oldScore == "" || score >= parseInt(oldScore)) {
+        if ( oldScore == "" || oldScore == NaN || score >= parseInt(oldScore)) {
           winner = true;
         };
       })
@@ -255,7 +255,7 @@ if (holes != null) {
       const parties = [...tableauScoreHard.querySelectorAll('tr')];
       const scores = parties.forEach(partie => {
         const oneScore = partie.querySelector('.player-score');
-        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "" ) {
+        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "" || oneScore.innerText == "NaN" ) {
           nameMoved = (partie.querySelector('.player-name')).innerText;
           console.log(nameMoved)
           scoreMoved = parseInt(oneScore.innerText);
@@ -271,7 +271,7 @@ if (holes != null) {
       const parties = [...tableauScoreEasy.querySelectorAll('tr')]
       const scores = parties.forEach(partie => {
         const oneScore = partie.querySelector('.player-score');
-        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "") {
+        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "" || oneScore.innerText == "NaN" ) {
           nameMoved = (partie.querySelector('.player-name')).innerText;
           console.log(nameMoved)
           scoreMoved = parseInt(oneScore.innerText);
