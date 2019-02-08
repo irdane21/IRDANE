@@ -1,5 +1,5 @@
 .wrapper-game {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-image: image-url('game-2.png'), linear-gradient(white, orange);
 }
@@ -22,6 +22,7 @@
   margin: auto;
   border: 5px solid #f0595a;
   background: transparent;
+  margin-bottom: 50px;
 }
 
 .game-card {
