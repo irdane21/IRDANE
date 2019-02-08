@@ -238,7 +238,7 @@ if (holes != null) {
     winner = false;
     nameInput.classList.add('opa-city');
     buttonInput.classList.add('opa-city');
-    textInput.innerText = 'You are on the Top Ladder! Save Your score:'
+    textInput.innerText = 'You are on the Top Ladder! Save your score:'
   }
 
   function looseMessage() {
