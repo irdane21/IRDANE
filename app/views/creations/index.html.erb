@@ -1,11 +1,11 @@
 <%= render 'shared/navbar' %>
-<div class="wrapper-creations white">
+<div class="wrapper-creations">
   <div class="items">
     <% @creations.each do |creation| %>
       <div class="item">
         <figure class="figure">
           <%= link_to creation_path(creation.id) do %>
-            <%= cl_image_tag creation.photo, crop: :thumb, width: 300, height: 200 %>
+            <%= cl_image_tag creation.photo, crop: :thumb, width: 600, height: 400 %>
           <% end %>
           <button class="btn btn-photo">
             <%= link_to creation_path(creation.id) do %>
