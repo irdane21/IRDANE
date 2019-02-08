@@ -123,10 +123,11 @@ if (holes != null) {
   const tableauScoreHard = document.querySelector('.ladder-hard');
   const buttonHard = document.querySelector('.btn-hard');
   const buttonEasy = document.querySelector('.btn-easy');
-  const endGameMessage = document.querySelector('.end-game-message')
+  const endGameMessage = document.querySelector('.end-game-message');
   const textInput = endGameMessage.querySelector('h4');
   const nameInput = endGameMessage.querySelector('input');
   const buttonInput = endGameMessage.querySelector('button');
+  const holesEasy = document.querySelectorAll('.hole-easy');
 
   let lastHole;
   let timeUp = false;
@@ -139,23 +140,43 @@ if (holes != null) {
   }
 
   function randHoles(holes) {
-    const idx = Math.floor(Math.random()* holes.length);
-    const hole = holes[idx];
-    if (hole === lastHole) {
-      return randHoles(holes);
+    if (gameMode == "easy") {
+      const idx = Math.floor(Math.random()* holesEasy.length);
+      const hole = holesEasy[idx];
+      if (hole === lastHole) {
+        return randHoles(holesEasy);
+      }
+      lastHole = hole;
+      return hole;
+    } else {
+      const idx = Math.floor(Math.random()* holes.length);
+      const hole = holes[idx];
+      if (hole === lastHole) {
+        return randHoles(holes);
+      }
+      lastHole = hole;
+      return hole;
     }
-    lastHole = hole;
-    return hole;
   }
 
   function popUp(){
-    const time = randomTime(200, 1000);
-    const hole = randHoles(holes);
-    hole.classList.add('up');
-    setTimeout(() => {
-      hole.classList.remove('up');
-      if (!timeUp) popUp();
-    }, time);
+    if (gameMode == "easy") {
+      const time = randomTime(200, 1000);
+      const hole = randHoles(holesEasy);
+      hole.classList.add('up');
+      setTimeout(() => {
+        hole.classList.remove('up');
+        if (!timeUp) popUp();
+      }, time);
+    } else {
+      const time = randomTime(150, 700);
+      const hole = randHoles(holes);
+      hole.classList.add('up');
+      setTimeout(() => {
+        hole.classList.remove('up');
+        if (!timeUp) popUp();
+      }, time);
+    }
   }
 
   function startGame() {
@@ -163,10 +184,17 @@ if (holes != null) {
     timeUp = false;
     score = 0;
     popUp();
-    setTimeout(() => {
-      checkScore();
-      timeUp = true;
-    }, 10000)
+    if (gameMode == "easy") {
+      setTimeout(() => {
+        checkScore();
+        timeUp = true;
+      }, 10000)
+    } else {
+      setTimeout(() => {
+        checkScore();
+        timeUp = true;
+      }, 20000)
+    }
   }
 
   function checkScore() {
@@ -229,7 +257,9 @@ if (holes != null) {
         const oneScore = partie.querySelector('.player-score');
         if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "" ) {
           nameMoved = (partie.querySelector('.player-name')).innerText;
+          console.log(nameMoved)
           scoreMoved = parseInt(oneScore.innerText);
+          console.log(scoreMoved)
           oneScore.innerText = `${score}`;
           (partie.querySelector('.player-name')).innerText = name;
           name = nameMoved
@@ -243,7 +273,9 @@ if (holes != null) {
         const oneScore = partie.querySelector('.player-score');
         if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "") {
           nameMoved = (partie.querySelector('.player-name')).innerText;
+          console.log(nameMoved)
           scoreMoved = parseInt(oneScore.innerText);
+          console.log(scoreMoved)
           oneScore.innerText = `${score}`;
           (partie.querySelector('.player-name')).innerText = name;
           name = nameMoved
@@ -278,8 +310,10 @@ if (holes != null) {
 
   function showLadder(e) {
     if (e.target.textContent == "HARD") {
+      holes.forEach(hole => hole.classList.add('hole-active'));
       gameMode = "hard"
     } else {
+      holes.forEach(hole => hole.classList.remove('hole-active'));
       gameMode = "easy"
     }
     buttonEasy.classList.toggle('btn-active');
