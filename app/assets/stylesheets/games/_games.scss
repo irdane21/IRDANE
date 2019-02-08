@@ -1,0 +1,47 @@
+.wrapper-game {
+  height: 100vh;
+  width: 100vw;
+  background-image: image-url('game-2.png'), linear-gradient(white, orange);
+}
+
+.pompailoppe {
+  width: 100%;
+  height: 150px;
+  border: 5px solid #f0595a;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 89, 90, 0.6);
+
+}
+
+.game-card-edge {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  border: 5px solid #f0595a;
+  background: transparent;
+}
+
+.game-card {
+  width: 300px;
+  height: 400px;
+  background: rgba(240, 89, 90, 0.6);
+  text-align: center;
+  margin: auto;
+  transition: all 0.4s;
+  transform: scale(0.95);
+
+  h3 {
+    color: white !important;
+  }
+}
+
+.game-card:hover {
+  transform: scale(1);
+}
+
+.img-whack-a-mole {
+
+}
