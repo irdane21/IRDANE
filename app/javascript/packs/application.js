@@ -112,3 +112,187 @@ if (hero != null) {
   hero.addEventListener('mousemove', shadow);
 }
 
+//Game Whack a Mole
+
+const holes = document.querySelectorAll('.hole');
+if (holes != null) {
+  const scoreBoard = document.querySelector('.score');
+  const moles = document.querySelectorAll('.mole');
+  const buttonStart = document.querySelector('.startGame');
+  const tableauScoreEasy = document.querySelector('.ladder-easy');
+  const tableauScoreHard = document.querySelector('.ladder-hard');
+  const buttonHard = document.querySelector('.btn-hard');
+  const buttonEasy = document.querySelector('.btn-easy');
+  const endGameMessage = document.querySelector('.end-game-message')
+  const textInput = endGameMessage.querySelector('h4');
+  const nameInput = endGameMessage.querySelector('input');
+  const buttonInput = endGameMessage.querySelector('button');
+
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+  let gameMode = "easy";
+  let winner = false;
+
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function randHoles(holes) {
+    const idx = Math.floor(Math.random()* holes.length);
+    const hole = holes[idx];
+    if (hole === lastHole) {
+      return randHoles(holes);
+    }
+    lastHole = hole;
+    return hole;
+  }
+
+  function popUp(){
+    const time = randomTime(200, 1000);
+    const hole = randHoles(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) popUp();
+    }, time);
+  }
+
+  function startGame() {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    popUp();
+    setTimeout(() => {
+      checkScore();
+      timeUp = true;
+    }, 10000)
+  }
+
+  function checkScore() {
+    const myArray = []
+    if (gameMode == "hard") {
+      const parties = [...tableauScoreHard.querySelectorAll('tr')]
+      const scores = parties.forEach(partie => {
+        const oneScore = partie.querySelector('.player-score')
+        myArray.push(oneScore.innerText)
+      })
+      myArray.forEach(oldScore => {
+        if ( oldScore == "" || score >= parseInt(oldScore)) {
+          winner = true;
+        };
+      })
+      if (winner) {
+        popTheForm();
+      } else {
+        looseMessage();
+      }
+    } else {
+      const parties = [...tableauScoreEasy.querySelectorAll('tr')]
+      const scores = parties.forEach(partie => {
+        const oneScore = partie.querySelector('.player-score')
+        myArray.push(oneScore.innerText)
+      })
+      myArray.forEach(oldScore => {
+        if ( oldScore == "" || score >= parseInt(oldScore)) {
+          winner = true;
+        };
+      })
+      if (winner) {
+        popTheForm();
+      } else {
+        looseMessage();
+      }
+    }
+  }
+
+  function popTheForm() {
+    winner = false;
+    nameInput.classList.add('opa-city');
+    buttonInput.classList.add('opa-city');
+    textInput.innerText = 'You are on the Top Ladder! Save Your score:'
+  }
+
+  function looseMessage() {
+    const textInput = endGameMessage.querySelector('h4');
+    textInput.innerText = 'Sorry but you are not on the top ladder... Try again'
+  }
+
+  function submitScore() {
+    let name = nameInput.value;
+    instanceItInDatabase(name);
+    let scoreMoved;
+    let nameMoved;
+    if (gameMode == "hard") {
+      const parties = [...tableauScoreHard.querySelectorAll('tr')];
+      const scores = parties.forEach(partie => {
+        const oneScore = partie.querySelector('.player-score');
+        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "" ) {
+          nameMoved = (partie.querySelector('.player-name')).innerText;
+          scoreMoved = parseInt(oneScore.innerText);
+          oneScore.innerText = `${score}`;
+          (partie.querySelector('.player-name')).innerText = name;
+          name = nameMoved
+          score = scoreMoved
+        }
+      })
+
+    } else {
+      const parties = [...tableauScoreEasy.querySelectorAll('tr')]
+      const scores = parties.forEach(partie => {
+        const oneScore = partie.querySelector('.player-score');
+        if ( score >= parseInt(oneScore.innerText) || oneScore.innerText == "") {
+          nameMoved = (partie.querySelector('.player-name')).innerText;
+          scoreMoved = parseInt(oneScore.innerText);
+          oneScore.innerText = `${score}`;
+          (partie.querySelector('.player-name')).innerText = name;
+          name = nameMoved
+          score = scoreMoved
+        }
+      })
+    }
+    nameInput.classList.remove('opa-city');
+    buttonInput.classList.remove('opa-city');
+    textInput.innerText = ''
+  }
+
+  function instanceItInDatabase(name) {
+    console.log('je suis à la requète')
+    $.ajax({
+      type: "POST",
+      url: "/parties",
+      headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
+      data: { partie: { name: name, difficulty: gameMode, score: score, game: "whack a mole"}},
+    }).then((response) => {
+      console.log(response)
+    });
+  }
+
+
+  function getPoint(e) {
+    if (!e.isTrusted) return
+    score++;
+    this.classList.remove('up');
+    scoreBoard.textContent = score;
+  }
+
+  function showLadder(e) {
+    if (e.target.textContent == "HARD") {
+      gameMode = "hard"
+    } else {
+      gameMode = "easy"
+    }
+    buttonEasy.classList.toggle('btn-active');
+    buttonHard.classList.toggle('btn-active');
+    tableauScoreHard.classList.toggle('table-hide');
+    tableauScoreEasy.classList.toggle('table-hide');
+
+  }
+
+  buttonEasy.addEventListener('click', showLadder);
+  buttonHard.addEventListener('click', showLadder);
+  moles.forEach(mole => mole.addEventListener('click', getPoint));
+  buttonStart.addEventListener('click', startGame);
+  buttonInput.addEventListener('click', submitScore);
+
+}

@@ -1,4 +1,206 @@
-<%= render 'shared/navbar' %>
-<div class="wrapper-game bon">
-  tu azss fhvbjfdsqkefrv
+<div class="wrapper d-flex no-padding">
+  <div class="side-score-bar">
+    <button class="startGame btn-startgame orange-color">Start!</button>
+    <div class="switch-button d-flex">
+      <button class="difficultybutton btn-easy btn-active">EASY</button>
+      <button class="difficultybutton btn-hard">HARD</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody class="ladder-hard table-hide">
+        <tr>
+          <th scope="row">1</th>
+          <td class="player-name">
+            <%= @parties_hard[0] ? @parties_hard[0].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[0] ? @parties_hard[0].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td class="player-name">
+            <%= @parties_hard[1] ? @parties_hard[1].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[1] ? @parties_hard[1].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td class="player-name">
+            <%= @parties_hard[2] ? @parties_hard[2].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[2] ? @parties_hard[2].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td class="player-name">
+            <%= @parties_hard[3] ? @parties_hard[3].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[3] ? @parties_hard[3].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td class="player-name">
+            <%= @parties_hard[4] ? @parties_hard[4].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[4] ? @parties_hard[4].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td class="player-name">
+            <%= @parties_hard[5] ? @parties_hard[5].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[5] ? @parties_hard[5].score : '' %>
+          </td>
+        </tr>
+        </tr>
+          <th scope="row">7</th>
+          <td class="player-name">
+            <%= @parties_hard[6] ? @parties_hard[6].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[6] ? @parties_hard[6].score : '' %>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td class="player-name">
+            <%= @parties_hard[7] ? @parties_hard[7].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_hard[7] ? @parties_hard[7].score : '' %>
+          </td>
+        </tr>
+      </tbody>
+      <tbody class="ladder-easy">
+        <tr >
+          <th scope="row">1</th>
+          <td class="player-name">
+            <%= @parties_easy[0] ? @parties_easy[0].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[0] ? @parties_easy[0].score : '' %>
+          </td>
+        </tr>
+        <tr >
+          <th scope="row">2</th>
+          <td class="player-name">
+            <%= @parties_easy[1] ? @parties_easy[1].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[1] ? @parties_easy[1].score : '' %>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">3</th>
+          <td class="player-name">
+            <%= @parties_easy[2] ? @parties_easy[2].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[2] ? @parties_easy[2].score : '' %>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">4</th>
+          <td class="player-name">
+            <%= @parties_easy[3] ? @parties_easy[3].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[3] ? @parties_easy[3].score : '' %>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">5</th>
+          <td class="player-name">
+            <%= @parties_easy[4] ? @parties_easy[4].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[4] ? @parties_easy[4].score : '' %>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">6</th>
+          <td class="player-name">
+            <%= @parties_easy[5] ? @parties_easy[5].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[5] ? @parties_easy[5].score : '' %>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">7</th>
+          <td class="player-name">
+            <%= @parties_easy[6] ? @parties_easy[6].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[6] ? @parties_easy[6].score : '' %>
+          </td>
+
+        <tr>
+          <th scope="row">8</th>
+          <td class="player-name">
+            <%= @parties_easy[7] ? @parties_easy[7].name : '' %>
+          </td>
+          <td class="player-score">
+            <%= @parties_easy[7] ? @parties_easy[7].score : '' %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn-startgame other-color">Quit</button>
+  </div>
+  <div class="wrapper-mole-game">
+    <h1>Whack-a-mole! <span class="score">0</span></h1>
+    <div class="end-game-message">
+      <h4></h4>
+      <input type="text" name="name" class="end-game-input" placeholder="your speudo">
+      <button class="btn btn-success">Save it!</button>
+    </div>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+    </div>
+  </div>
 </div>

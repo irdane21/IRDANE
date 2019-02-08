@@ -5,7 +5,7 @@
       <h1>Which game do you want to play ?!</h1>
       <% @games.each do |game| %>
         <div class="col-md-6 col-sm-12 col-xl-4 col-lg-6 no-padding">
-          <%= link_to game_path(game.id) do %>
+          <%= link_to whack_a_mole_path(id: game.id) do %>
             <h3><%= game.name %></h3>
           <% end %>
         </div>

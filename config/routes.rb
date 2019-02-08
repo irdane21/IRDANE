@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   resources :articles
   resources :videos
   resources :contacts, only: [:new, :create]
-  resources :games do
-    resources :parties, only: [:index, :create]
-  end
+  resources :games
+  resources :parties, only: [:index, :create]
   resources :sitephotos, only: [:index, :new, :create, :destroy]
   get '/dashboard', to: 'accounts#dashboard'
   get '/newdesign', to: 'pages#newdesign'
