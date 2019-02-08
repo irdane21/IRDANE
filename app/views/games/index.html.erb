@@ -1,12 +1,23 @@
 <%= render 'shared/navbar' %>
-<div class="wrapper white">
+<div class="wrapper-game">
   <div class="container">
     <div class="row justify-content-center">
-      <h1>Which game do you want to play ?!</h1>
-      <div class="col-md-6 col-sm-12 col-xl-4 col-lg-6 no-padding">
-        <%= link_to whack_a_mole_path do %>
-          <h3>Whack a mole!</h3>
-        <% end %>
+      <div class="col-12 col-sm-12 col-md-12 col-xl-9 col-lg-10">
+        <div class="pompailoppe">
+          <h1>Choose one game and try to beat my records!</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-12 col-col-md-10 col-xl-5 col-lg-5">
+        <div class="game-card-edge">
+          <%= link_to whack_a_mole_path do %>
+            <div class="game-card">
+              <h3>Whack a mole!</h3>
+              <%= image_tag("mole.svg", :class => "img-whack-a-mole") %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
