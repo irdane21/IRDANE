@@ -169,7 +169,7 @@ if (holes != null) {
         if (!timeUp) popUp();
       }, time);
     } else {
-      const time = randomTime(150, 700);
+      const time = randomTime(150, 1000);
       const hole = randHoles(holes);
       hole.classList.add('up');
       setTimeout(() => {
