@@ -39,7 +39,7 @@
 }
 
 .logo {
-  width: 30vh;
+  width: 25vh;
   min-width: 200px;
   margin-bottom: 1vh;
   transition: 0.3s ease;
@@ -49,9 +49,9 @@
   &:hover {
     transition: 0.3s ease;
     text-decoration: none;
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 
   }
 }
