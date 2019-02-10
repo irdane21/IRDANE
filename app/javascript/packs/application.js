@@ -82,21 +82,11 @@ window.addEventListener('keyup', (e)=> {
   }
 })
 
-// navbar animation
-const mymotion = document.getElementById("tada")
-if (mymotion == null) {
-
-} else {
-  mymotion.addEventListener("click", (event) => {
-    const left = document.getElementById("cachette-left").classList.toggle("motion")
-    const right = document.getElementById("cachette-right").classList.toggle("motion")
-  })
-}
-
 // dropdown menu for mobile
-const menu = document.getElementById("mini")
+const menu = document.getElementById("dropp")
 
 function showMenu() {
+  console.log('click')
   document.getElementById("myDropDownMenu").classList.toggle("show");
 }
 
