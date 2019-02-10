@@ -183,14 +183,14 @@
 
 .dropdown a:hover {background-color: #ddd;}
 
-@media (max-width: 1150px) {
-  .navbar-perso {
+@media (max-width: 1000px) {
+  .navbar-normal {
     display: none;
   }
 }
 
-@media (min-width: 1150px) {
-  .mini-navbar {
+@media (min-width: 1000px) {
+  .navbar-mini {
     display: none;
   }
 }

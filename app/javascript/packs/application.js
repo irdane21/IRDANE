@@ -94,7 +94,7 @@ if (mymotion == null) {
 }
 
 // dropdown menu for mobile
-const menu = document.getElementById("logo-mini")
+const menu = document.getElementById("mini")
 
 function showMenu() {
   document.getElementById("myDropDownMenu").classList.toggle("show");
