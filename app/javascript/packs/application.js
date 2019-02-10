@@ -1,5 +1,24 @@
  import "bootstrap";
 
+ //Nav bar
+
+const nav = document.querySelector('#maine');
+if (nav) {
+  const topNav = nav.offsetTop;
+
+  function fixNav() {
+    if (window.scrollY >= topNav) {
+      document.body.style.paddingTop = nav.offsetHeight + 'px';
+      document.body.classList.add('fixed-nav')
+    } else {
+      document.body.style.paddingTop = 0;
+      document.body.classList.remove('fixed-nav')
+    }
+  }
+
+  window.addEventListener('scroll', fixNav);
+}
+
 // function for show side Title when scroll down home page
 function debounce(func, wait = 25, immediate = true) {
   var timeout;
@@ -87,30 +106,30 @@ if(menu != null) {
 
 //Shadow on title home page
 
-const hero = document.querySelector('.hero');
-if (hero != null) {
+// const hero = document.querySelector('.hero');
+// if (hero) {
 
-  const text = hero.querySelector('h1');
-  const walk = 60;
+//   const text = hero.querySelector('h1');
+//   const walk = 60;
 
-  function shadow(e) {
-    const { offsetWidth: width, offsetHeight: height} = hero;
-    let { offsetY: y, offsetX: x } = e;
+//   function shadow(e) {
+//     const { offsetWidth: width, offsetHeight: height} = hero;
+//     let { offsetY: y, offsetX: x } = e;
 
-    if (this !== e.target) {
-      x = x + e.target.offsetLeft;
-      y = y + e.target.offsetTop;
-    }
-    // console.log(x, y)
+//     // if (this !== e.target) {
+//     //   x = x + e.target.offsetLeft;
+//     //   y = y + e.target.offsetTop;
+//     // }
+//     console.log(x, y)
 
-    const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
-    const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
+//     const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
+//     const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
 
-    text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
-  };
+//     text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
+//   };
 
-  hero.addEventListener('mousemove', shadow);
-}
+//   hero.addEventListener('mousemove', shadow);
+// }
 
 //Game Whack a Mole
 

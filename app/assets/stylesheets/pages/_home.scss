@@ -11,17 +11,17 @@ header {
   }
 }
 
-header::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 300px;
-  width: 100%;
-  background-color: #F0595A;
-  clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
-  -webkit-clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
-}
+// header::after {
+//   content: '';
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   height: 300px;
+//   width: 100%;
+//   background-color: #F0595A;
+//   clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
+//   -webkit-clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
+// }
 
 .vide-newdesign {
   width: 100%;
