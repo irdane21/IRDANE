@@ -94,32 +94,21 @@ if(menu != null) {
   menu.addEventListener('click', showMenu)
 };
 
-//Shadow on title home page
+//sites content method
 
-// const hero = document.querySelector('.hero');
-// if (hero) {
+const triggers = document.querySelectorAll('.card-website-edge');
+const background  = document.querySelector('.contentBackground');
 
-//   const text = hero.querySelector('h1');
-//   const walk = 60;
+  function handleEnter() {
+    this.classList.add('trigger-enter');
+  }
 
-//   function shadow(e) {
-//     const { offsetWidth: width, offsetHeight: height} = hero;
-//     let { offsetY: y, offsetX: x } = e;
+  function handleLeave() {
+    this.classList.remove('trigger-enter');
+  }
 
-//     // if (this !== e.target) {
-//     //   x = x + e.target.offsetLeft;
-//     //   y = y + e.target.offsetTop;
-//     // }
-//     console.log(x, y)
-
-//     const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
-//     const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
-
-//     text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
-//   };
-
-//   hero.addEventListener('mousemove', shadow);
-// }
+  triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
 
 //Game Whack a Mole
 

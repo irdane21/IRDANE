@@ -3,17 +3,23 @@
 <div class="wrapper-hom d-flex no-padding">
   <div class="side-bar">
     <% @sites.each do |site| %>
-      div
+      <div class="card-site-content">
+        <h3><%= site.title %></h3>
+        <p><%= site.description %></p>
+        <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
+      </div>
     <% end %>
   </div>
   <div class="container">
     <div class="row justify-content-center">
       <% @sites.each do |site| %>
         <div class="col-lg-10">
-          <div class="card-website-edge">
-            <div class="card-website" style="background-image: url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;">
+          <%= link_to site.url do %>
+            <div class="card-website-edge">
+              <div class="card-website" style="background-image: url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;">
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       <% end %>
       <!-- <div class="big-device">
@@ -32,7 +38,7 @@
           </div>
         <% end %>
       </div> -->
-      <div class="small-device">
+      <!-- <div class="small-device">
         <div class="container">
           <div class="row justify-content-center">
             <% @sites.each do |site| %>
@@ -52,7 +58,7 @@
             <% end %>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
