@@ -10,6 +10,7 @@
   min-height: 100vh;
   background: image-url('genesis-svg.svg') center center no-repeat fixed;
   background-size: cover;
+  padding: 150px 0;
 }
 
 .title-home {
@@ -24,4 +25,49 @@
   h1 {
     font-size: 3rem;
   }
+}
+
+.home-card-border {
+  width: 280px;
+  height: 350px;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.home-inside-card {
+  width: 280px;
+  height: 350px;
+  margin: auto;
+  transition: all 0.4s;
+  transform: scale(0.95);
+  background: white;
+  border-radius: 3px;
+
+  .home-card-title {
+    width: 100%;
+    height: 80px;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.home-card-description {
+  padding: 1rem;
+
+  p {
+    color: #8C8BF8 !important;
+  }
+}
+
+.home-inside-card:hover {
+  transform: scale(1);
+}
+
+.cole-padding {
+  padding: 40px 0;
 }
