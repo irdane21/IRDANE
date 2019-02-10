@@ -1,299 +1,74 @@
-header {
-  position: relative;
+.banner-new-hom {
+  width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(#97D8E0, #F0595A);
-  text-align: center;
+  background: image-url('newHomeBanner.png') center center no-repeat;
+  background-size: cover;
+}
+
+.wrapper-hom {
+  width: 100vw;
+  min-height: 100vh;
+  background: image-url('genesis-svg.svg') center center no-repeat fixed;
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.title-home {
+  width: 100vw;
+  height: 200px;
+  background: image-url('dark-blue-cloudy.png') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   h1 {
-    padding-top: 200px;
-    letter-spacing: 1.5rem;
-    text-shadow: 10px 10px 0 rgba(240,240,240,0.3);
-    font-size: 100px !important;
+    font-size: 3rem;
+    text-align: center !important;
   }
 }
 
-header::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 300px;
-  width: 100%;
-  background-color: #F0595A;
-  clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
-  -webkit-clip-path: polygon(0 0%, 0% 100%, 300px 100%, 100% 0);
+.home-card-border {
+  width: 280px;
+  height: 350px;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 3px;
 }
 
-.vide-newdesign {
-  width: 100%;
-  height: 300px;
+.home-inside-card {
+  width: 280px;
+  height: 350px;
+  margin: auto;
+  transition: all 0.4s;
+  transform: scale(0.95);
   background: white;
-}
+  border-radius: 3px;
 
-.section-home {
-  background: white;
-  display: flex;
-}
-
-#bandeau1 {
-  width: 300px;
-  height: 1802px;
-  background-image: linear-gradient(#F0595A, #97D8E0);
-  position: relative; /* !important to override Gmaps inline CSS */
-}
-
-#bandeau2 {
-  width: 300px;
-  height: 1802px;
-  background-image: linear-gradient(#97D8E0, #F0595A);
-  position: relative; /* !important to override Gmaps inline CSS */
-}
-
-.titre-home1 {
-  width: 600px;
-  height: 200px;
-  position: absolute;
-  top: 750px;
-  left: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.titre-home2 {
-  width: 800px;
-  height: 200px;
-  position: absolute;
-  top: 1750px;
-  left: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.titre-home3 {
-  width: 600px;
-  height: 200px;
-  position: absolute;
-  top: 550px;
-  left: -550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.titre-home4 {
-  width: 600px;
-  height: 200px;
-  position: absolute;
-  top: 1450px;
-  left: -550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.rotate1 {
-  transform: rotate(-90deg);
-  transform-origin: top left;
-  opacity: 0;
-  transition: all .5s;
-}
-
-.rotate2 {
-  transform: rotate(90deg);
-  transform-origin: bottom right;
-  opacity: 0;
-  transition: all .5s;
-}
-
-.container-newdesign1 {
-  width: calc(100% - 300px);
-  height: 100%;
-  background: $white;
-}
-
-.container-newdesign2 {
-  width: calc(100% - 300px);
-  height: 100%;
-  background: $white;
-}
-
-.rotate1.active {
-  opacity: 1;
-}
-
-.rotate2.active {
-  opacity: 1;
-}
-
-.carda {
-  width: 100%;
-  height: 500px;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  transition: 0.3s ease;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-  box-shadow: 0rem 0.5rem 0.5rem rgba(151, 216, 224, 0.5);
-}
-.imageBack1 {
-background: image-url('travel-share-2.png');
-background-size: cover;
-background-position: center;
-}
-
-.imageBack2 {
-background: image-url('Test-Logo-Inkind.png');
-background-size: cover;
-background-position: center;
-}
-
-.imageBack3 {
-background: image-url('video-home.png');
-background-size: cover;
-background-position: center;
-}
-
-.imageBack4 {
-background: image-url('game-1.png');
-background-size: cover;
-background-position: center;
-}
-
-.carda:hover {
-  transition: 0.3s ease;
-  -ms-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  .carda-button {
-    opacity: 1;
+  .home-card-title {
+    width: 100%;
+    height: 80px;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.carda-text {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  height: 25%;
-  background: #97D8E0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-card-description {
   padding: 1rem;
+
   p {
-    text-decoration: none !important;
+    color: #8C8BF8 !important;
   }
 }
 
-.carda-button {
-  width: 100%;
-  height: 75%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-inside-card:hover {
+  transform: scale(1);
 }
 
-
-.transition {
-  width: 100%;
-  height: 300px;
-  background: #97D8E0;
-  position: relative;
-}
-
-.transition-title {
-  height: 100px;
-  width: 300px;
-  position: absolute;
-  top: calc(100% - 50px);
-  left: calc(50% - 150px);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.transition::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 300px;
-  width: 100%;
-  background-color: white;
-  clip-path: polygon(300px 0%, 100% 300px, 100% 0);
-  -webkit-clip-path: polygon(300px 0%, 100% 300px, 100% 0);
-}
-.separator {
-  width: 100%;
-  height: 300px;
-  background: white;
-  position: relative;
-}
-
-.separator::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 300px;
-  width: 100%;
-  background-color: #97D8E0;
-  clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
-  -webkit-clip-path: polygon(0px 0%, calc(100% - 300px) 100%, 100% 100%, 100% 0px);
-}
-
-header h1 {
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.big-hide {
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  #bandeau1 {
-    display: none;
-  }
-  #bandeau2 {
-    display: none;
-  }
-  .container-newdesign1 {
-    width: 100%;
-  }
-  .container-newdesign2 {
-    width: 100%;
-  }
-  header::after {
-    display: none;
-  }
-
-  header h1 {
-    font-size: 4rem;
-  }
-  .transition {
-    display: none;
-  }
-  .transition::after {
-    display: none;
-  }
-  .separator {
-    display: none;
-  }
-  .separator::after {
-    display: none;
-  }
-}
-
-@media (min-width: 769px ) {
-  .big-hide {
-    display: none;
-  }
-
-  header h1 {
-    font-size: 6rem;
-  }
+.cole-padding {
+  padding: 40px 0;
 }
