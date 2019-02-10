@@ -1,97 +1,93 @@
-<header class="hero">
-  <h1>IRDANE</h1>
-  <h2>Welcome to my Portfolio</h2>
-</header>
-<div class="vide-newdesign"></div>
-<section class="section-home">
-  <div id="bandeau1">
-    <div class="titre-home1 rotate1">
-      <h2>WEBSITES</h2>
-    </div>
-    <div class="titre-home2 rotate1">
-      <h2>GRAPHIC DESIGN</h2>
-    </div>
-  </div>
-  <div class="container container-newdesign1">
+<header class="banner-new-hom"></header>
+<%= render 'shared/new-nav' %>
+<div class="title-home">
+  <h1>Welcome to IRDANE's portfolio</h1>
+</div>
+<div class="wrapper-hom">
+  <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <h3 class="big-hide">WEBSITES</h3>
-      </div>
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cole-padding">
         <%= link_to sites_path do %>
-          <div class="carda imageBack1">
-            <div class="carda-text">
-              <p>
-                Here you can find all my creations or projects that I worked on at school at Le Wagon or on my own.
-              </p>
+          <div class="home-card-border">
+            <div class="home-inside-card">
+              <div class="home-card-title">
+                <h3>WEBSITES</h3>
+              </div>
+              <div class="home-card-description">
+                <p>
+                  Here you can find all my creations or projects that I worked on at school at Le Wagon or on my own.
+                </p>
+              </div>
             </div>
           </div>
         <% end %>
       </div>
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <h3 class="big-hide">GRAPHIC DESIGN</h3>
-      </div>
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cole-padding">
         <%= link_to creations_path do %>
-          <div class="carda imageBack2">
-            <div class="carda-text">
-              <p>
-                I started the graphic design as a hobby 2 years ago and step by step I improved my skills. Take a look!
-              </p>
+          <div class="home-card-border">
+            <div class="home-inside-card">
+              <div class="home-card-title">
+                <h3>GRAPHIC DESIGN</h3>
+              </div>
+              <div class="home-card-description">
+                <p>
+                  I started the graphic design as a hobby 2 years ago and step by step I improved my skills. Take a look!
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cole-padding">
+        <%= link_to games_path do %>
+          <div class="home-card-border">
+            <div class="home-inside-card">
+              <div class="home-card-title">
+                <h3>GAMES</h3>
+              </div>
+              <div class="home-card-description">
+                <p>
+                  I created some games to explore all the possibilities of JavaScript language. Have fun!
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cole-padding">
+        <%= link_to videos_path do %>
+          <div class="home-card-border">
+            <div class="home-inside-card">
+              <div class="home-card-title">
+                <h3>VIDEOS</h3>
+              </div>
+              <div class="home-card-description">
+                <p>
+                  For myself and my family I'm recording, editing and publishing videos. If you're curious and not too scared, check it out!
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cole-padding">
+        <%= link_to articles_path do %>
+          <div class="home-card-border">
+            <div class="home-inside-card">
+              <div class="home-card-title">
+                <h3>ARTICLES</h3>
+              </div>
+              <div class="home-card-description">
+                <p>
+                  I created this section for push myself to write more. And share my ideas through another media.
+                </p>
+              </div>
             </div>
           </div>
         <% end %>
       </div>
     </div>
-  </div>
-</section>
-<div class="transition">
-  <div class="transition-title">
-    <h2>HOBBIES</h2>
   </div>
 </div>
-<div class="separator"></div>
-<section class="section-home">
-  <div class="container container-newdesign2">
-    <div class="row justify-content-center">
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <h3 class="big-hide">VIDEOS</h3>
-      </div>
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <%= link_to videos_path do %>
-          <div class="carda imageBack3">
-            <div class="carda-text">
-              <p>
-                For myself and my family I'm recording, editing and publishing videos. If you're curious and not too scared, check it out!
-              </p>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <h3 class="big-hide">GAMES</h3>
-      </div>
-       <div class="col-md-10 col-sm-10 col-xl-10 col-lg-10">
-        <%= link_to games_path do %>
-          <div class="carda imageBack4">
-            <div class="carda-text">
-              <p>
-                I created some games to explore all the possibilities of JavaScript language. Have fun!
-              </p>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div id="bandeau2">
-    <div class="titre-home3 rotate2">
-      <h2>VIDEOS</h2>
-    </div>
-    <div class="titre-home4 rotate2">
-      <h2>GAMES</h2>
-    </div>
-  </div>
-</section>
 
 

@@ -1,10 +1,24 @@
-<%= render 'shared/navbar' %>
-<div class="website-wrapper">
+<!-- <header class="banner-new-hom"></header> -->
+<%= render 'shared/new-nav' %>
+<div class="wrapper-hom d-flex no-padding">
+  <div class="side-bar">
+    <% @sites.each do |site| %>
+      div
+    <% end %>
+  </div>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="big-device">
+      <% @sites.each do |site| %>
+        <div class="col-lg-10">
+          <div class="card-website-edge">
+            <div class="card-website" style="background-image: url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;">
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <!-- <div class="big-device">
         <% @sites.each do |site| %>
-          <div class="col-md-12 col-sm-12 col-xl-12 col-lg-12">
+          <div class="col-md-10 col-xl-10 col-lg-10">
             <div style="background-image: url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;" class="site-card">
               <div class="title-sites">
                 <h2><%= site.title %></h2>
@@ -17,7 +31,7 @@
             </div>
           </div>
         <% end %>
-      </div>
+      </div> -->
       <div class="small-device">
         <div class="container">
           <div class="row justify-content-center">
