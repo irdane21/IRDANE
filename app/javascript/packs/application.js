@@ -19,58 +19,6 @@ if (nav) {
   window.addEventListener('scroll', fixNav);
 }
 
-// function for show side Title when scroll down home page
-// function debounce(func, wait = 25, immediate = true) {
-//   var timeout;
-//   return function() {
-//     var context = this, args = arguments;
-//     var later = function() {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     var callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// }
-
-// const sliderImages = document.querySelectorAll('.rotate1')
-// const sliderTitles = document.querySelectorAll('.rotate2')
-
-// function checkSlide(e) {
-//   sliderImages.forEach(sliderImage => {
-//     // half way throught the image
-//     const slideInAt = (window.scrollY + window.innerHeight);
-
-//     // bottom of the image
-//     const imageBottom = sliderImage.offsetTop + window.innerHeight + 100
-//     const isHalfShown = slideInAt > (sliderImage.offsetTop + 200 + window.innerHeight);
-//     const isNotScrolledPast = window.scrollY < imageBottom;
-
-//     if(isHalfShown && isNotScrolledPast) {
-//       sliderImage.classList.add('active');
-//     } else {
-//       sliderImage.classList.remove('active');
-//     }
-//   })
-//   sliderTitles.forEach(sliderTitle => {
-//     const slideInAt = (window.scrollY + window.innerHeight);
-
-//     const imageBottom = sliderTitle.offsetTop + 2550 + window.innerHeight
-//     const isHalfShown = slideInAt > (sliderTitle.offsetTop + 2550 + window.innerHeight);
-//     const isNotScrolledPast = window.scrollY < imageBottom;
-
-//     if(isHalfShown && isNotScrolledPast) {
-//       sliderTitle.classList.add('active');
-//     } else {
-//       sliderTitle.classList.remove('active');
-//     }
-//  })
-// }
-
-// window.addEventListener('scroll', debounce(checkSlide));
-
 // Event listener code pour dashboard
 const pressed = [];
 const secretCode = 'irdanedash';
@@ -97,23 +45,23 @@ if(menu != null) {
 //sites content method
 
 const triggers = document.querySelectorAll('.card-website-edge');
-const background  = document.querySelector('.dropdownBackground');
-const container = document.querySelector('.container');
+if (triggers) {
+  const background  = document.querySelector('.dropdownBackground');
+  const container = document.querySelector('.container');
 
-  function handleEnter() {
-    console.log('ENTER');
-    this.classList.add('trigger-enter');
-    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
-  }
+    function handleEnter() {
+      this.classList.add('trigger-enter');
+      setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
+    }
 
-  function handleLeave() {
-    console.log('LEAVE');
-    this.classList.remove('trigger-enter-active');
-    setTimeout(() => this.classList.remove('trigger-enter'), 150);
-  }
+    function handleLeave() {
+      this.classList.remove('trigger-enter-active');
+      setTimeout(() => this.classList.remove('trigger-enter'), 150);
+    }
 
-  triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
-  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+    triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+    triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+}
 
 //Game Whack a Mole
 

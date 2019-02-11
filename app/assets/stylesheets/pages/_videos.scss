@@ -3,13 +3,13 @@
   background: white;
 }
 .vert {
-  background: #88B7A5;
+  background: #01073B;
   padding-top: 15vh;
   padding-bottom: 15vh;
 }
 
 .bluevert {
-  background: #41737C;
+  background: #FD7179;
   padding-top: 15vh;
   padding-bottom: 15vh;
 }
@@ -20,68 +20,78 @@
   align-items: center;
 }
 
-.overflow {
-  overflow: scroll;
-  height: 80vh;
-
-}
 .video-card-wrapper {
   margin-top: 15vh;
   margin-bottom: 15vh;
   width: 90%;
+  height: 600px;
   margin: 0 auto;
   background: white;
   border-radius: 2rem;
   padding: 0.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
 }
 
 .one-video {
-  width: 100%;
-  margin-top: 3vh;
-}
+  width: 800px;
+  margin: 20px;
+  text-align: center;
 
-.description-video {
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  h3 {
+    color: #01073B !important;
+  }
+
   p {
-    color: #88B7A5 !important;
+    display: block !important;
+    color: #01073B !important;
+    text-align: center !important;
   }
 }
+
 .display-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 1rem;
 }
 
 .header-channel-1 {
   position: relative;
   height: 400px;
   background-image: white;
-  h1 {
-    color: #88B7A5 !important;
-    padding: 100px 0;
-    font: 44px "Arial";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  h2 {
+    color: #01073B !important;
     text-align: center;
   }
+}
+
+.header-channel-1 > div {
+  width: 100%;
+  text-align: center;
+}
+
+.header-channel-2 > div {
+  width: 100%;
+  text-align: center;
 }
 
 .header-channel-2 {
   position: relative;
   height: 400px;
   background-image: white;
-  h1 {
-    color: #41737C !important;
-    padding: 100px 0;
-    font: 44px "Arial";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  h2 {
+    color: #FD7179 !important;
     text-align: center;
   }
-}
-
-
-.header-channel-1 h1 {
-  color: white;
 }
 
 svg {
@@ -93,32 +103,40 @@ svg {
 
 .separator-video-1 {
   position: relative;
-  background: #88B7A5;
+  background: #01073B;
   width: 100%;
   height: 100px;
 }
 
 .separator-video-2 {
   position: relative;
-  background: #41737C;
+  background: #FD7179;
   width: 100%;
   height: 100px;
-}
-
-.white-tampon {
-  width: 100%;
-  height: 200px;
-  background: white;
 }
 
 @media (max-width: 699px) {
   .svg--lg {
     display: none;
   }
+  h2 {
+    font-size: 2rem !important;
+  }
+
 }
 
 @media (min-width: 700px) {
   .svg--sm {
     display: none;
   }
+
+  h2 {
+    font-size: 5rem !important;
+  }
+}
+
+.white-tampon {
+  height: 200px;
+  background: white;
+  width: 100vw;
 }
