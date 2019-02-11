@@ -75,12 +75,10 @@ if (holes != null) {
   const buttonHard = document.querySelector('.btn-hard');
   const buttonEasy = document.querySelector('.btn-easy');
   const endGameMessage = document.querySelector('.end-game-message');
-  if (endGameMessage) {
-    const textInput = endGameMessage.querySelector('h4');
-    const nameInput = endGameMessage.querySelector('input');
-    const buttonInput = endGameMessage.querySelector('button');
-    const holesEasy = document.querySelectorAll('.hole-easy');
-  }
+  const textInput = endGameMessage.querySelector('h4');
+  const nameInput = endGameMessage.querySelector('input');
+  const buttonInput = endGameMessage.querySelector('button');
+  const holesEasy = document.querySelectorAll('.hole-easy');
 
   let lastHole;
   let timeUp = false;
