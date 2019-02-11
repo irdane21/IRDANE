@@ -1,22 +1,17 @@
-<!-- <header class="banner-new-hom"></header> -->
 <%= render 'shared/new-nav' %>
 <div class="wrapper-hom d-flex no-padding">
-  <div class="side-bar">
-    <% @sites.each do |site| %>
-      <div class="card-site-content">
-        <h3><%= site.title %></h3>
-        <p><%= site.description %></p>
-        <%= link_to "Go visite it!", site.url, target: :_blank, class: "btn btn-card" %>
-      </div>
-    <% end %>
-  </div>
   <div class="container">
+    <div class="dropdownBackground"></div>
     <div class="row justify-content-center">
       <% @sites.each do |site| %>
-        <div class="col-lg-10">
+        <div class="col-11 col-sm-11 col-md-10 col-lg-10 col-xl-9">
           <%= link_to site.url do %>
             <div class="card-website-edge">
               <div class="card-website" style="background-image: url('<%= cl_image_path site.photo, height: 600, width: 1200, crop: :fill %>');background-size: cover; background-position: center;">
+              </div>
+              <div class="card-site-content">
+                <h2><%= site.title %></h2>
+                <p><%= site.description %></p>
               </div>
             </div>
           <% end %>
