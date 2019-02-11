@@ -1,6 +1,6 @@
  import "bootstrap";
 
- //Nav bar
+ //Fixed Nav bar
 
 const nav = document.querySelector('#maine');
 if (nav) {
@@ -20,56 +20,56 @@ if (nav) {
 }
 
 // function for show side Title when scroll down home page
-function debounce(func, wait = 25, immediate = true) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
+// function debounce(func, wait = 25, immediate = true) {
+//   var timeout;
+//   return function() {
+//     var context = this, args = arguments;
+//     var later = function() {
+//       timeout = null;
+//       if (!immediate) func.apply(context, args);
+//     };
+//     var callNow = immediate && !timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//     if (callNow) func.apply(context, args);
+//   };
+// }
 
-const sliderImages = document.querySelectorAll('.rotate1')
-const sliderTitles = document.querySelectorAll('.rotate2')
+// const sliderImages = document.querySelectorAll('.rotate1')
+// const sliderTitles = document.querySelectorAll('.rotate2')
 
-function checkSlide(e) {
-  sliderImages.forEach(sliderImage => {
-    // half way throught the image
-    const slideInAt = (window.scrollY + window.innerHeight);
+// function checkSlide(e) {
+//   sliderImages.forEach(sliderImage => {
+//     // half way throught the image
+//     const slideInAt = (window.scrollY + window.innerHeight);
 
-    // bottom of the image
-    const imageBottom = sliderImage.offsetTop + window.innerHeight + 100
-    const isHalfShown = slideInAt > (sliderImage.offsetTop + 200 + window.innerHeight);
-    const isNotScrolledPast = window.scrollY < imageBottom;
+//     // bottom of the image
+//     const imageBottom = sliderImage.offsetTop + window.innerHeight + 100
+//     const isHalfShown = slideInAt > (sliderImage.offsetTop + 200 + window.innerHeight);
+//     const isNotScrolledPast = window.scrollY < imageBottom;
 
-    if(isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
-    } else {
-      sliderImage.classList.remove('active');
-    }
-  })
-  sliderTitles.forEach(sliderTitle => {
-    const slideInAt = (window.scrollY + window.innerHeight);
+//     if(isHalfShown && isNotScrolledPast) {
+//       sliderImage.classList.add('active');
+//     } else {
+//       sliderImage.classList.remove('active');
+//     }
+//   })
+//   sliderTitles.forEach(sliderTitle => {
+//     const slideInAt = (window.scrollY + window.innerHeight);
 
-    const imageBottom = sliderTitle.offsetTop + 2550 + window.innerHeight
-    const isHalfShown = slideInAt > (sliderTitle.offsetTop + 2550 + window.innerHeight);
-    const isNotScrolledPast = window.scrollY < imageBottom;
+//     const imageBottom = sliderTitle.offsetTop + 2550 + window.innerHeight
+//     const isHalfShown = slideInAt > (sliderTitle.offsetTop + 2550 + window.innerHeight);
+//     const isNotScrolledPast = window.scrollY < imageBottom;
 
-    if(isHalfShown && isNotScrolledPast) {
-      sliderTitle.classList.add('active');
-    } else {
-      sliderTitle.classList.remove('active');
-    }
-  })
-}
+//     if(isHalfShown && isNotScrolledPast) {
+//       sliderTitle.classList.add('active');
+//     } else {
+//       sliderTitle.classList.remove('active');
+//     }
+//  })
+// }
 
-window.addEventListener('scroll', debounce(checkSlide));
+// window.addEventListener('scroll', debounce(checkSlide));
 
 // Event listener code pour dashboard
 const pressed = [];
@@ -94,32 +94,26 @@ if(menu != null) {
   menu.addEventListener('click', showMenu)
 };
 
-//Shadow on title home page
+//sites content method
 
-// const hero = document.querySelector('.hero');
-// if (hero) {
+const triggers = document.querySelectorAll('.card-website-edge');
+const background  = document.querySelector('.dropdownBackground');
+const container = document.querySelector('.container');
 
-//   const text = hero.querySelector('h1');
-//   const walk = 60;
+  function handleEnter() {
+    console.log('ENTER');
+    this.classList.add('trigger-enter');
+    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
+  }
 
-//   function shadow(e) {
-//     const { offsetWidth: width, offsetHeight: height} = hero;
-//     let { offsetY: y, offsetX: x } = e;
+  function handleLeave() {
+    console.log('LEAVE');
+    this.classList.remove('trigger-enter-active');
+    setTimeout(() => this.classList.remove('trigger-enter'), 150);
+  }
 
-//     // if (this !== e.target) {
-//     //   x = x + e.target.offsetLeft;
-//     //   y = y + e.target.offsetTop;
-//     // }
-//     console.log(x, y)
-
-//     const xWalk = Math.round(( x / width * walk ) - ( walk / 2 ));
-//     const yWalk = Math.round(( y / height * walk ) - ( walk / 2 ));
-
-//     text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(240, 240, 240, 0.5)`;
-//   };
-
-//   hero.addEventListener('mousemove', shadow);
-// }
+  triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
 
 //Game Whack a Mole
 
