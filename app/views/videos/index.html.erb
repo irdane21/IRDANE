@@ -12,27 +12,19 @@
     </svg>
   </div>
 </div>
-<div class="wrapper vert">
+<div class="wrapper vert d-flex">
   <div class="video-card-wrapper">
-    <div class="container overflow">
-      <% @creativ.each do |video| %>
-        <div class="row">
-          <div class="col-12 col-sm-12 col-col-md-12 col-xl-5 col-lg-5">
-            <div class="description-video">
-              <p><strong><%= video.title %></strong><br><br>
-              <%= video.description %></p>
-            </div>
+    <% @creativ.each do |video| %>
+      <div class="testin">
+        <div class="one-video">
+          <h3><%= video.title %></h3>
+          <div class="display-video">
+            <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="col-12 col-sm-12 col-col-md-12 col-xl-5 col-lg-5">
-            <div class="one-video">
-              <div class="display-video">
-                <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
+          <p><%= video.description %></p>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 <div class="separator-video-1">
@@ -56,25 +48,7 @@
 </div>
 <div class="wrapper bluevert">
   <div class="video-card-wrapper">
-    <div class="container overflow">
-      <% @adrien.each do |video| %>
-        <div class="row">
-          <div class="col-12 col-sm-12 col-col-md-12 col-xl-5 col-lg-5">
-            <div class="description-video">
-              <p><strong><%= video.title %></strong><br><br>
-              <%= video.description %></p>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-col-md-12 col-xl-5 col-lg-5">
-            <div class="one-video">
-              <div class="display-video">
-                <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+
   </div>
 </div>
 <div class="separator-video-2">
