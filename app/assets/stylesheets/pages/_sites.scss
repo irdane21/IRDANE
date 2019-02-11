@@ -1,3 +1,103 @@
+.mini-banner {
+  width: 100vw;
+  height: 300px;
+  background: image-url('Hiboux-Blanc.svg'),linear-gradient(#01073B, #25D7FB);
+  background-position: no-repeat;
+}
+
+.wrapper-site {
+  width: 100vw;
+  min-height: 100vh;
+  background: image-url('background-color-other.png') center center no-repeat fixed;
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.side-bar {
+  width: 400px;
+  position: sticky;
+  background: rgba(245,245,245,0.6);
+}
+
+.card-website-edge {
+  width: 100%;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-top: 100px;
+  transition: all 0.4s;
+}
+
+.card-website {
+  width: 100%;
+  height: 350px;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 3px;
+  transform: scale(0.95);
+  transition: all 0.4s;
+}
+
+.card-website:hover {
+  transform: scale(1);
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.card-website-description {
+
+}
+
+.card-site-content {
+  opacity: 0;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  will-change: opacity;
+  display: none;
+
+  h2 {
+    color: #01073B !important;
+  }
+
+  p {
+    color: #8C8BF8 !important;
+  }
+}
+
+.dropdownBackground {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.trigger-enter .card-site-content {
+  display: block;
+  text-align: center;
+  background: white;
+  transform: scale(0.95);
+}
+
+.trigger-enter-active .card-site-content {
+  opacity: 1;
+}
+
+
 // .website-wrapper {
 //   width: 100%;
 //   background: $white;
