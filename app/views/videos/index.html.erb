@@ -1,8 +1,8 @@
 <%= render 'shared/new-nav' %>
 <div class="wrapper-video">
   <div class="header-channel-1">
-    <h2>Creativ Construction</h2>
     <div>
+      <h2>Creativ Construction</h2>
       <script src="https://apis.google.com/js/platform.js"></script>
       <div class="g-ytsubscribe" data-channelid="UCddE5znXiM2pl15WUtI1_lQ" data-layout="default" data-count="hidden"></div>
     </div>
@@ -15,14 +15,12 @@
 <div class="wrapper vert d-flex">
   <div class="video-card-wrapper">
     <% @creativ.each do |video| %>
-      <div class="testin">
-        <div class="one-video">
-          <h3><%= video.title %></h3>
-          <div class="display-video">
-            <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <p><%= video.description %></p>
+      <div class="one-video">
+        <h3><%= video.title %></h3>
+        <div class="display-video">
+          <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <p><%= video.description %></p>
       </div>
     <% end %>
   </div>
@@ -35,10 +33,12 @@
 </div>
 <div class="wrapper-video">
   <div class="header-channel-2">
-    <h2>Les discussion d'Adrien</h2>
-    <div class="channel-content-2">
-      <script src="https://apis.google.com/js/platform.js"></script>
-      <div class="g-ytsubscribe" data-channelid="UCnqpqEESZFefHIm5wzZoUQw" data-layout="default" data-count="hidden"></div>
+    <div>
+      <h2>Les discussion d'Adrien</h2>
+      <div class="channel-content-2">
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channelid="UCnqpqEESZFefHIm5wzZoUQw" data-layout="default" data-count="hidden"></div>
+      </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <polygon class="svg--sm" fill="#FD7179" points="0,0 30,101 65,21 90,101 100,75 100,101 0,101"/>
@@ -47,8 +47,16 @@
   </div>
 </div>
 <div class="wrapper bluevert">
-  <div class="video-card-wrapper">
-
+  <div class="video-card-wrapper d-flex">
+  <% @adrien.each do |video| %>
+      <div class="one-video">
+        <h3><%= video.title %></h3>
+        <div class="display-video">
+          <iframe width="560" height="315" src=<%= video.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p><%= video.description %></p>
+      </div>
+    <% end %>
   </div>
 </div>
 <div class="separator-video-2">

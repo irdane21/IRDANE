@@ -44,6 +44,8 @@ li.pop-logo a {
   max-width: 500px;
 }
 
+
+
 nav a {
   text-decoration: none;
   padding: 20px;
@@ -65,10 +67,21 @@ nav a {
   }
 }
 
+@media (max-width: 450px) {
+  .fixed-nav li.pop-logo {
+    max-width: 0px;
+  }
+}
+
 @media (min-width: 1000px) {
   .navbar-mini {
     display: none;
   }
+}
+
+
+.navbar-mini {
+  padding: 0;
 }
 
 .dropp{
