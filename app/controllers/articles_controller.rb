@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.sort{ |a,b| b.created_at <=> a.created_at}
   end
 
   def show

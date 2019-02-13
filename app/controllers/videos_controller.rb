@@ -3,8 +3,8 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @creativ = Video.where(collection: "Creativ Construction")
-    @adrien = Video.where(collection: "Adrien Lefrancq")
+    @creativ = Video.where(collection: "Creativ Construction").sort{ |a,b| b.created_at <=> a.created_at}
+    @adrien = Video.where(collection: "Adrien Lefrancq").sort{ |a,b| b.created_at <=> a.created_at}
   end
 
   def show

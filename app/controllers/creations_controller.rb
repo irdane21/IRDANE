@@ -3,7 +3,7 @@ class CreationsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @creations = Creation.all
+    @creations = Creation.all.sort{ |a,b| b.created_at <=> a.created_at}
   end
 
   def show
