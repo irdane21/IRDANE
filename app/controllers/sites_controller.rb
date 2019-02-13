@@ -3,7 +3,7 @@ class SitesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @sites = Site.all
+    @sites = Site.all.sort{ |a,b| b.created_at <=> a.created_at}
   end
 
   def show

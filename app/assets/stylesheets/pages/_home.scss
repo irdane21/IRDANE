@@ -1,12 +1,12 @@
 .banner-new-hom {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: image-url('newHomeBanner.png') center center no-repeat;
   background-size: cover;
 }
 
 .wrapper-hom {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: image-url('genesis-svg.svg') center center no-repeat fixed;
   background-size: cover;
@@ -14,7 +14,7 @@
 }
 
 .title-home {
-  width: 100vw;
+  width: 100%;
   height: 200px;
   background: image-url('dark-blue-cloudy.png') center center no-repeat;
   background-size: cover;

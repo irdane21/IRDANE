@@ -85,6 +85,7 @@ if (holes != null) {
   let score = 0;
   let gameMode = "easy";
   let winner = false;
+  let lastClick;
 
   function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -253,6 +254,8 @@ if (holes != null) {
 
 
   function getPoint(e) {
+    if (lastClick == e.target.classList.value) return;
+    lastClick = e.target.classList.value
     if (!e.isTrusted) return
     score++;
     this.classList.remove('up');
