@@ -26,7 +26,7 @@ window.addEventListener('keyup', (e)=> {
   pressed.push(e.key)
   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
   if (pressed.join('').includes(secretCode)) {
-    window.location.href = 'http://localhost:3000/dashboard';
+    window.location.href = 'https://irdane.herokuapp.com/dashboard';
   }
 })
 
