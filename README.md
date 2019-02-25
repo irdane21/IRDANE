@@ -1,1 +1,11 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# IRDANE PORTFOLIO
+
+The app is made with ruby on rails, you can find the app in production there :
+
+- www.irdane.com
+
+OR
+
+- https://irdane.herokuapp.com/
+
+On this app you can find all my work, my graphic design or my video. Take a look !
